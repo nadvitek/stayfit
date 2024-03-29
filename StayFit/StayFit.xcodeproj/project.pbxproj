@@ -11,6 +11,13 @@
 		A31F974F2BB6E5970029C02A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31F974E2BB6E5970029C02A /* ContentView.swift */; };
 		A31F97512BB6E5990029C02A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A31F97502BB6E5990029C02A /* Assets.xcassets */; };
 		A31F97542BB6E5990029C02A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A31F97532BB6E5990029C02A /* Preview Assets.xcassets */; };
+		A31F975C2BB6EC840029C02A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31F975B2BB6EC840029C02A /* LoginView.swift */; };
+		A31F975F2BB6ECAE0029C02A /* SFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31F975E2BB6ECAE0029C02A /* SFTextField.swift */; };
+		A31F97612BB6ECC60029C02A /* SFColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31F97602BB6ECC60029C02A /* SFColors.swift */; };
+		A31F97662BB6F4FC0029C02A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31F97652BB6F4FC0029C02A /* LoginViewModel.swift */; };
+		A31F97682BB6F7BA0029C02A /* SFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31F97672BB6F7BA0029C02A /* SFButton.swift */; };
+		A31F976A2BB6FC160029C02A /* SFFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31F97692BB6FC160029C02A /* SFFonts.swift */; };
+		A31F976E2BB6FFE10029C02A /* SFErrorLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31F976D2BB6FFE10029C02A /* SFErrorLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +26,13 @@
 		A31F974E2BB6E5970029C02A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A31F97502BB6E5990029C02A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A31F97532BB6E5990029C02A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A31F975B2BB6EC840029C02A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		A31F975E2BB6ECAE0029C02A /* SFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFTextField.swift; sourceTree = "<group>"; };
+		A31F97602BB6ECC60029C02A /* SFColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFColors.swift; sourceTree = "<group>"; };
+		A31F97652BB6F4FC0029C02A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		A31F97672BB6F7BA0029C02A /* SFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFButton.swift; sourceTree = "<group>"; };
+		A31F97692BB6FC160029C02A /* SFFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFFonts.swift; sourceTree = "<group>"; };
+		A31F976D2BB6FFE10029C02A /* SFErrorLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFErrorLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +65,9 @@
 		A31F974B2BB6E5970029C02A /* StayFit */ = {
 			isa = PBXGroup;
 			children = (
+				A31F97622BB6ED820029C02A /* Core */,
+				A31F975D2BB6EC900029C02A /* UI */,
+				A31F975A2BB6EC770029C02A /* Login */,
 				A31F974C2BB6E5970029C02A /* StayFitApp.swift */,
 				A31F974E2BB6E5970029C02A /* ContentView.swift */,
 				A31F97502BB6E5990029C02A /* Assets.xcassets */,
@@ -65,6 +82,34 @@
 				A31F97532BB6E5990029C02A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A31F975A2BB6EC770029C02A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A31F975B2BB6EC840029C02A /* LoginView.swift */,
+				A31F97652BB6F4FC0029C02A /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		A31F975D2BB6EC900029C02A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				A31F975E2BB6ECAE0029C02A /* SFTextField.swift */,
+				A31F97602BB6ECC60029C02A /* SFColors.swift */,
+				A31F97672BB6F7BA0029C02A /* SFButton.swift */,
+				A31F97692BB6FC160029C02A /* SFFonts.swift */,
+				A31F976D2BB6FFE10029C02A /* SFErrorLabel.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		A31F97622BB6ED820029C02A /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +182,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A31F97612BB6ECC60029C02A /* SFColors.swift in Sources */,
+				A31F975C2BB6EC840029C02A /* LoginView.swift in Sources */,
+				A31F976E2BB6FFE10029C02A /* SFErrorLabel.swift in Sources */,
+				A31F97682BB6F7BA0029C02A /* SFButton.swift in Sources */,
+				A31F976A2BB6FC160029C02A /* SFFonts.swift in Sources */,
+				A31F97662BB6F4FC0029C02A /* LoginViewModel.swift in Sources */,
 				A31F974F2BB6E5970029C02A /* ContentView.swift in Sources */,
+				A31F975F2BB6ECAE0029C02A /* SFTextField.swift in Sources */,
 				A31F974D2BB6E5970029C02A /* StayFitApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
