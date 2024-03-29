@@ -40,6 +40,7 @@ class LoginViewModel: LoginViewModeling {
     // MARK: - Private interface
     
     private func login() {
+        UserDefaults.standard.set(email, forKey: "userEmail")
         UserDefaults.standard.set(true, forKey: "isLogged")
     }
     

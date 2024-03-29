@@ -1,6 +1,13 @@
 import SwiftUI
 
 struct SFTabView: View {
+    
+    // MARK: - Properties
+    
+    @AppStorage("userEmail") var userEmail: String = ""
+    
+    // MARK: - UI
+    
     var body: some View {
         TabView {
             SFMenuView()
@@ -13,7 +20,7 @@ struct SFTabView: View {
                     Label("Statistics", systemImage: "waveform")
                 }
             
-            UserView()
+            UserView(viewModel: UserViewModel(email: userEmail))
                 .tabItem {
                     Label("User", systemImage: "person.crop.circle")
                 }
