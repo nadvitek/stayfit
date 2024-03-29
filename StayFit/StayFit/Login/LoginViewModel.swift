@@ -4,8 +4,10 @@ import Observation
 protocol LoginViewModeling {
     var email: String { get set }
     var password: String { get set }
+    var isLogging: Bool { get set }
+    var isErrorLabelVisible: Bool { get set }
     
-    func login()
+    func onButtonTap()
 }
 
 @Observable
@@ -15,6 +17,8 @@ class LoginViewModel: LoginViewModeling {
     
     var email: String = ""
     var password: String = ""
+    var isLogging: Bool = true
+    var isErrorLabelVisible: Bool = false
     
     // MARK: - Initializers
     
@@ -23,7 +27,23 @@ class LoginViewModel: LoginViewModeling {
     
     // MARK: - Internal interface
     
-    func login() {
-        // TODO: - Implement later
+    func onButtonTap() {
+        guard !email.isEmpty && !password.isEmpty else { isErrorLabelVisible = true; return }
+        
+        if isLogging {
+            login()
+        } else {
+            
+        }
+    }
+    
+    // MARK: - Private interface
+    
+    private func login() {
+        isErrorLabelVisible = true
+    }
+    
+    private func registrate() {
+        
     }
 }
