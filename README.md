@@ -1,11 +1,13 @@
 # StayFit
 
 Bc. Vít Nademlejnský 
+
 21.3.2024
 
 ## Úvod
 Cílem tohoto dokumentu je detailněji popsat aplikaci StayFit včetně LoFi prototypů a všech možných případů užití s jejich scénáři, která bude vyvíjena pro operační systém iOS 17.
-Popis aplikace
+
+## Popis aplikace
 Aplikace je určená pro plánování tréninkových aktivit a zaznamenávání si jich do kalendáře pod svým vlastním účtem. Ke každému proběhlému tréninku aplikace také umožňoje zachycení tréninku pomocí fotoaparátu mobilního zařízení. V průběhu používání budou vytvářeny statistiky popisující počty odcvičených dní a vyzdvihující nejčastější typ cvičení. V aplikaci také budou nabízena různá doporučení na fitness eshopy nebo na stránky či sociální sítě ověřených fitness influencerů, kde budou uživateli moci najít inspiraci.
 
 ## Existující řešení
