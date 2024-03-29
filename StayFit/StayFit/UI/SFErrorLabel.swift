@@ -19,6 +19,7 @@ struct SFErrorLabel: View {
         .padding(.horizontal, 16)
         .padding(.vertical, 8)
         .background(.sfRed)
+        .clipShape(.rect(cornerRadius: 8))
     }
 }
 

@@ -23,8 +23,9 @@ struct SFTextField: View {
             .frame(height: 59)
             .overlay {
                 TextField(placeholder, text: $text)
-                    .font(.system(size: 24, weight: .semibold))
+                    .font(.semiMedium)
                     .padding(16)
+                    .tint(.black)
             }
     }
 }

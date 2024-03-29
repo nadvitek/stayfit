@@ -43,6 +43,7 @@ struct SFButton: View {
                 .padding(.horizontal, 64)
                 .padding(.vertical, 16)
                 .background(buttonStyle.bgColor)
+                .clipShape(.rect(cornerRadius: 8))
         }
     }
 }
