@@ -1,18 +1,33 @@
-//
-//  SFTabView.swift
-//  StayFit
-//
-//  Created by Vít Nademlejnský on 29.03.2024.
-//
-
 import SwiftUI
 
 struct SFTabView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView {
+            SFMenuView()
+                .tabItem {
+                    Label("Menu", systemImage: "doc.fill")
+                }
+            
+            StatisticsView()
+                .tabItem {
+                    Label("Statistics", systemImage: "waveform")
+                }
+            
+            UserView()
+                .tabItem {
+                    Label("User", systemImage: "person.crop.circle")
+                }
+        }
+        .tint(.sfTabBlue)
     }
 }
+
+#if DEBUG
+
+// MARK: - Previews
 
 #Preview {
     SFTabView()
 }
+
+#endif

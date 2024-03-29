@@ -40,7 +40,7 @@ class LoginViewModel: LoginViewModeling {
     // MARK: - Private interface
     
     private func login() {
-        isErrorLabelVisible = true
+        UserDefaults.standard.set(true, forKey: "isLogged")
     }
     
     private func registrate() {

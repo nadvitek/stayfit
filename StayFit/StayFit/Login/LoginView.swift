@@ -33,7 +33,7 @@ struct LoginView: View {
                     .foregroundStyle(.black)
                     .font(.semiMedium)
                 
-                SFTextField(text: $viewModel.email, placeholder: "example123")
+                SFTextField(text: $viewModel.password, placeholder: "example123")
             }
             
             Rectangle()

@@ -1,14 +1,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @AppStorage("isLogged") var isLogged = false
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        if isLogged {
+            SFTabView()
+        } else {
+            LoginView(viewModel: LoginViewModel())
         }
-        .padding()
     }
 }
 
