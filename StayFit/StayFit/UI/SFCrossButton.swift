@@ -1,18 +1,27 @@
-//
-//  SFCrossButton.swift
-//  StayFit
-//
-//  Created by Vít Nademlejnský on 31.03.2024.
-//
-
 import SwiftUI
 
 struct SFCrossButton: View {
+    
+    let action: () -> Void
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button {
+            action()
+        } label: {
+            Image(systemName: "plus")
+                .resizable()
+                .frame(width: 25, height: 25)
+                .padding(8)
+                .background {
+                    Circle()
+                        .stroke(lineWidth: 3)
+                }
+                .rotationEffect(.degrees(45))
+                .foregroundStyle(.black)
+        }
     }
 }
 
 #Preview {
-    SFCrossButton()
+    SFCrossButton {}
 }

@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct SFPicker: View {
+struct SFTypePicker: View {
     
     // MARK: - Properties
     
@@ -40,5 +40,5 @@ struct SFPicker: View {
 }
 
 #Preview {
-    SFPicker(name: "Type", elements: ["Running", "Yoga", "Basketball"], picked: .constant(""))
+    SFTypePicker(name: "Type", elements: ["Running", "Yoga", "Basketball"], picked: .constant(""))
 }
