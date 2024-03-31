@@ -26,9 +26,9 @@ struct UserView: View {
                         SFTextField(text: $viewModel.password, placeholder: "New password")
                             .textContentType(.newPassword)
                     }
-                    .foregroundStyle(.black)
                 }
                 .padding(.horizontal, 16)
+                .foregroundStyle(.black)
                 
                 Spacer()
             }

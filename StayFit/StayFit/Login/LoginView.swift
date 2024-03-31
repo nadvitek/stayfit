@@ -25,7 +25,7 @@ struct LoginView: View {
                     .foregroundStyle(.black)
                     .font(.semiMedium)
                 
-                SFTextField(text: $viewModel.email, placeholder: "example@gmail.com")
+                SFTextField(text: $viewModel.email, placeholder: "example@gmail.com", type: .large)
             }
             
             VStack(alignment: .leading, spacing: 8) {
@@ -33,7 +33,7 @@ struct LoginView: View {
                     .foregroundStyle(.black)
                     .font(.semiMedium)
                 
-                SFTextField(text: $viewModel.password, placeholder: "example123")
+                SFTextField(text: $viewModel.password, placeholder: "example123", type: .large)
             }
             
             Rectangle()
@@ -58,6 +58,7 @@ struct LoginView: View {
                     .foregroundStyle(.black)
                     .font(.semiMedium)
                     .underline()
+                    .contentTransition(.identity)
             }
             .safeAreaPadding(.bottom, 100)
         }

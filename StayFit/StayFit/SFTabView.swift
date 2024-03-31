@@ -10,12 +10,12 @@ struct SFTabView: View {
     
     var body: some View {
         TabView {
-            SFMenuView()
+            SFMenuView(viewModel: SFMenuViewModel())
                 .tabItem {
                     Label("Menu", systemImage: "doc.fill")
                 }
             
-            StatisticsView()
+            StatisticsView(viewModel: StatisticsViewModel())
                 .tabItem {
                     Label("Statistics", systemImage: "waveform")
                 }
