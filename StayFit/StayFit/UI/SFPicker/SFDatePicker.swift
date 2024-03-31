@@ -29,11 +29,12 @@ struct SFDatePicker: View {
             DatePicker(
                 "",
                 selection: $picked,
-                displayedComponents: [.date]
+                displayedComponents: .date
             )
             .datePickerStyle(.compact)
             .frame(maxWidth: 100)
             .opacity(0.015)
+            .labelsHidden()
         }
     }
 }

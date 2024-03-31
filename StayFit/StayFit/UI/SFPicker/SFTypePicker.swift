@@ -5,16 +5,15 @@ struct SFTypePicker: View {
     // MARK: - Properties
     
     let name: String
-    let elements: [String]
-    @Binding var picked: String
-    @State var showPicker: Bool = false
+    private let elements: [TrainingType] = TrainingType.allCases
+    @Binding var picked: TrainingType
     
     // MARK: - UI
     
     var body: some View {
         ZStack {
             HStack(spacing: 8) {
-                Text(picked.isEmpty ? name : picked)
+                Text(name)
                     .font(.semiMedium2)
                 
                 Image(systemName: "chevron.down")
@@ -30,7 +29,7 @@ struct SFTypePicker: View {
             
             Picker("", selection: $picked) {
                 ForEach(elements, id:\.self) { element in
-                    Text(element)
+                    Text(element.rawValue)
                 }
             }
             .pickerStyle(.menu)
@@ -40,5 +39,5 @@ struct SFTypePicker: View {
 }
 
 #Preview {
-    SFTypePicker(name: "Type", elements: ["Running", "Yoga", "Basketball"], picked: .constant(""))
+    SFTypePicker(name: "Type", picked: .constant(.running))
 }

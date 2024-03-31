@@ -2,7 +2,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @AppStorage("isLogged") var isLogged = false
+    @AppStorage("isLogged") var isLogged = true
     
     var body: some View {
         if isLogged {

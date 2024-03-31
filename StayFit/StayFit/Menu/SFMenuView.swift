@@ -8,17 +8,14 @@ struct SFMenuView: View {
     
     var body: some View {
         NavigationStack {
-            VStack(spacing: 8) {
+            VStack(alignment: .leading, spacing: 8) {
                 topView
+                    .padding(.horizontal, 16)
                 
                 filterPart
                 
-                ScrollView {
-                    VStack(spacing: 8) {}
-                }
-                .scrollIndicators(.hidden)
+                scrollViewPart
             }
-            .padding(.horizontal, 16)
         }
     }
     
@@ -44,22 +41,62 @@ struct SFMenuView: View {
     }
     
     private var filterPart: some View {
-        HStack(alignment: .top, spacing: 8) {
-            if viewModel.filterActivate {
-                SFCrossButton {
-                    viewModel.clearFilter()
+        ScrollView(.horizontal) {
+            HStack(alignment: .top, spacing: 8) {
+                if viewModel.filterActivated {
+                    SFCrossButton {
+                        viewModel.clearFilter()
+                    }
+                }
+                
+                SFTypePicker(name: viewModel.typeFilterActivated ? viewModel.filteredType.rawValue : "Type", picked: $viewModel.filteredType)
+                
+                SFDatePicker(name: viewModel.dateFilterActivated ?  viewModel.filteredDate.parseDateToString() : "Date", picked: $viewModel.filteredDate)
+                
+                Spacer()
+            }
+            .padding(.vertical, 2)
+            .padding(.horizontal, 16)
+        }
+        .scrollIndicators(.hidden)
+        .scrollBounceBehavior(.basedOnSize, axes: .horizontal)
+    }
+    
+    private var scrollViewPart: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 16) {
+                ForEach(Array(viewModel.visibleData.keys), id: \.self) { key in
+                    if let values = viewModel.visibleData[key] {
+                        Text("\(key)")
+                            .font(.semiMedium2)
+                            .foregroundStyle(.black)
+                            .padding(.top, 8)
+                        itemsPart(values)
+                    }
                 }
             }
-            
-            SFTypePicker(name: "Type", elements: viewModel.types, picked: $viewModel.filteredType)
-            
-            SFDatePicker(name: "Date", elements: viewModel.types, picked: $viewModel.filteredDate)
-            
-            Spacer()
+            .padding(.horizontal, 16)
+        }
+        .scrollIndicators(.hidden)
+    }
+    
+    private func itemsPart(_ values: [TrainingItem]) -> some View {
+        ForEach(values) { value in
+            NavigationLink {
+                // TODO: - Implement Detail Empty
+            } label: {
+                SFTrainingItemView(trainingItem: value)
+            }
         }
     }
 }
 
+#if DEBUG
+
+// MARK: - Previews
+
 #Preview {
     SFMenuView(viewModel: SFMenuViewModelMock())
 }
+
+#endif

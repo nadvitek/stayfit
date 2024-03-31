@@ -18,6 +18,25 @@
 		A31F97682BB6F7BA0029C02A /* SFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31F97672BB6F7BA0029C02A /* SFButton.swift */; };
 		A31F976A2BB6FC160029C02A /* SFFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31F97692BB6FC160029C02A /* SFFonts.swift */; };
 		A31F976E2BB6FFE10029C02A /* SFErrorLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31F976D2BB6FFE10029C02A /* SFErrorLabel.swift */; };
+		A32FB0E02BB745B7003E0BC6 /* SFSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32FB0DF2BB745B7003E0BC6 /* SFSwitch.swift */; };
+		A32FB0E22BB74A84003E0BC6 /* LoginViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32FB0E12BB74A84003E0BC6 /* LoginViewModelMock.swift */; };
+		A32FB0E42BB751E5003E0BC6 /* SFTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32FB0E32BB751E5003E0BC6 /* SFTabView.swift */; };
+		A32FB0E62BB7526C003E0BC6 /* SFMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32FB0E52BB7526C003E0BC6 /* SFMenuView.swift */; };
+		A32FB0E82BB7527E003E0BC6 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32FB0E72BB7527E003E0BC6 /* StatisticsView.swift */; };
+		A32FB0EA2BB75288003E0BC6 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32FB0E92BB75288003E0BC6 /* UserView.swift */; };
+		A32FB0ED2BB7652C003E0BC6 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32FB0EC2BB7652C003E0BC6 /* UserViewModel.swift */; };
+		A32FB0EF2BB76667003E0BC6 /* UserViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32FB0EE2BB76667003E0BC6 /* UserViewModelMock.swift */; };
+		A32FB0F22BB821A1003E0BC6 /* StatisticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32FB0F12BB821A1003E0BC6 /* StatisticsViewModel.swift */; };
+		A32FB0F42BB82388003E0BC6 /* StatisticsViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32FB0F32BB82388003E0BC6 /* StatisticsViewModelMock.swift */; };
+		A32FB0F72BB82479003E0BC6 /* SFMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32FB0F62BB82479003E0BC6 /* SFMenuViewModel.swift */; };
+		A32FB0F92BB82836003E0BC6 /* SFTypePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32FB0F82BB82836003E0BC6 /* SFTypePicker.swift */; };
+		A32FB1002BB99A88003E0BC6 /* SFMenuViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32FB0FF2BB99A88003E0BC6 /* SFMenuViewModelMock.swift */; };
+		A32FB1022BB99C06003E0BC6 /* SFCrossButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32FB1012BB99C06003E0BC6 /* SFCrossButton.swift */; };
+		A32FB1052BB99FEC003E0BC6 /* SFDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32FB1042BB99FEC003E0BC6 /* SFDatePicker.swift */; };
+		A32FB1072BB9A89C003E0BC6 /* TrainingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32FB1062BB9A89C003E0BC6 /* TrainingItem.swift */; };
+		A32FB10B2BB9E859003E0BC6 /* SFTrainingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32FB10A2BB9E859003E0BC6 /* SFTrainingItemView.swift */; };
+		A32FB10D2BB9EDB5003E0BC6 /* TrainingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32FB10C2BB9EDB5003E0BC6 /* TrainingType.swift */; };
+		A32FB1102BBA076C003E0BC6 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32FB10F2BBA076C003E0BC6 /* DateExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +52,25 @@
 		A31F97672BB6F7BA0029C02A /* SFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFButton.swift; sourceTree = "<group>"; };
 		A31F97692BB6FC160029C02A /* SFFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFFonts.swift; sourceTree = "<group>"; };
 		A31F976D2BB6FFE10029C02A /* SFErrorLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFErrorLabel.swift; sourceTree = "<group>"; };
+		A32FB0DF2BB745B7003E0BC6 /* SFSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSwitch.swift; sourceTree = "<group>"; };
+		A32FB0E12BB74A84003E0BC6 /* LoginViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelMock.swift; sourceTree = "<group>"; };
+		A32FB0E32BB751E5003E0BC6 /* SFTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFTabView.swift; sourceTree = "<group>"; };
+		A32FB0E52BB7526C003E0BC6 /* SFMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFMenuView.swift; sourceTree = "<group>"; };
+		A32FB0E72BB7527E003E0BC6 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
+		A32FB0E92BB75288003E0BC6 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		A32FB0EC2BB7652C003E0BC6 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		A32FB0EE2BB76667003E0BC6 /* UserViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModelMock.swift; sourceTree = "<group>"; };
+		A32FB0F12BB821A1003E0BC6 /* StatisticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewModel.swift; sourceTree = "<group>"; };
+		A32FB0F32BB82388003E0BC6 /* StatisticsViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewModelMock.swift; sourceTree = "<group>"; };
+		A32FB0F62BB82479003E0BC6 /* SFMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFMenuViewModel.swift; sourceTree = "<group>"; };
+		A32FB0F82BB82836003E0BC6 /* SFTypePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFTypePicker.swift; sourceTree = "<group>"; };
+		A32FB0FF2BB99A88003E0BC6 /* SFMenuViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFMenuViewModelMock.swift; sourceTree = "<group>"; };
+		A32FB1012BB99C06003E0BC6 /* SFCrossButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFCrossButton.swift; sourceTree = "<group>"; };
+		A32FB1042BB99FEC003E0BC6 /* SFDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFDatePicker.swift; sourceTree = "<group>"; };
+		A32FB1062BB9A89C003E0BC6 /* TrainingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingItem.swift; sourceTree = "<group>"; };
+		A32FB10A2BB9E859003E0BC6 /* SFTrainingItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFTrainingItemView.swift; sourceTree = "<group>"; };
+		A32FB10C2BB9EDB5003E0BC6 /* TrainingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingType.swift; sourceTree = "<group>"; };
+		A32FB10F2BBA076C003E0BC6 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +103,9 @@
 		A31F974B2BB6E5970029C02A /* StayFit */ = {
 			isa = PBXGroup;
 			children = (
+				A32FB0F52BB82466003E0BC6 /* Menu */,
+				A32FB0F02BB76BAA003E0BC6 /* Statistics */,
+				A32FB0EB2BB7616C003E0BC6 /* User */,
 				A31F97622BB6ED820029C02A /* Core */,
 				A31F975D2BB6EC900029C02A /* UI */,
 				A31F975A2BB6EC770029C02A /* Login */,
@@ -72,6 +113,7 @@
 				A31F974E2BB6E5970029C02A /* ContentView.swift */,
 				A31F97502BB6E5990029C02A /* Assets.xcassets */,
 				A31F97522BB6E5990029C02A /* Preview Content */,
+				A32FB0E32BB751E5003E0BC6 /* SFTabView.swift */,
 			);
 			path = StayFit;
 			sourceTree = "<group>";
@@ -89,6 +131,7 @@
 			children = (
 				A31F975B2BB6EC840029C02A /* LoginView.swift */,
 				A31F97652BB6F4FC0029C02A /* LoginViewModel.swift */,
+				A32FB0E12BB74A84003E0BC6 /* LoginViewModelMock.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -96,11 +139,15 @@
 		A31F975D2BB6EC900029C02A /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				A32FB1032BB99FE1003E0BC6 /* SFPicker */,
 				A31F975E2BB6ECAE0029C02A /* SFTextField.swift */,
 				A31F97602BB6ECC60029C02A /* SFColors.swift */,
 				A31F97672BB6F7BA0029C02A /* SFButton.swift */,
 				A31F97692BB6FC160029C02A /* SFFonts.swift */,
 				A31F976D2BB6FFE10029C02A /* SFErrorLabel.swift */,
+				A32FB0DF2BB745B7003E0BC6 /* SFSwitch.swift */,
+				A32FB1012BB99C06003E0BC6 /* SFCrossButton.swift */,
+				A32FB10A2BB9E859003E0BC6 /* SFTrainingItemView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -108,8 +155,66 @@
 		A31F97622BB6ED820029C02A /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				A32FB10E2BBA0763003E0BC6 /* Extension */,
+				A32FB0FA2BB8A2AB003E0BC6 /* Model */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		A32FB0EB2BB7616C003E0BC6 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				A32FB0E92BB75288003E0BC6 /* UserView.swift */,
+				A32FB0EC2BB7652C003E0BC6 /* UserViewModel.swift */,
+				A32FB0EE2BB76667003E0BC6 /* UserViewModelMock.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		A32FB0F02BB76BAA003E0BC6 /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				A32FB0E72BB7527E003E0BC6 /* StatisticsView.swift */,
+				A32FB0F12BB821A1003E0BC6 /* StatisticsViewModel.swift */,
+				A32FB0F32BB82388003E0BC6 /* StatisticsViewModelMock.swift */,
+			);
+			path = Statistics;
+			sourceTree = "<group>";
+		};
+		A32FB0F52BB82466003E0BC6 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				A32FB0E52BB7526C003E0BC6 /* SFMenuView.swift */,
+				A32FB0F62BB82479003E0BC6 /* SFMenuViewModel.swift */,
+				A32FB0FF2BB99A88003E0BC6 /* SFMenuViewModelMock.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		A32FB0FA2BB8A2AB003E0BC6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A32FB1062BB9A89C003E0BC6 /* TrainingItem.swift */,
+				A32FB10C2BB9EDB5003E0BC6 /* TrainingType.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A32FB1032BB99FE1003E0BC6 /* SFPicker */ = {
+			isa = PBXGroup;
+			children = (
+				A32FB0F82BB82836003E0BC6 /* SFTypePicker.swift */,
+				A32FB1042BB99FEC003E0BC6 /* SFDatePicker.swift */,
+			);
+			path = SFPicker;
+			sourceTree = "<group>";
+		};
+		A32FB10E2BBA0763003E0BC6 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A32FB10F2BBA076C003E0BC6 /* DateExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,14 +288,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				A31F97612BB6ECC60029C02A /* SFColors.swift in Sources */,
+				A32FB1102BBA076C003E0BC6 /* DateExtension.swift in Sources */,
+				A32FB0F42BB82388003E0BC6 /* StatisticsViewModelMock.swift in Sources */,
+				A32FB1052BB99FEC003E0BC6 /* SFDatePicker.swift in Sources */,
 				A31F975C2BB6EC840029C02A /* LoginView.swift in Sources */,
+				A32FB0F92BB82836003E0BC6 /* SFTypePicker.swift in Sources */,
+				A32FB1022BB99C06003E0BC6 /* SFCrossButton.swift in Sources */,
+				A32FB0EF2BB76667003E0BC6 /* UserViewModelMock.swift in Sources */,
+				A32FB0E22BB74A84003E0BC6 /* LoginViewModelMock.swift in Sources */,
+				A32FB0E82BB7527E003E0BC6 /* StatisticsView.swift in Sources */,
+				A32FB1002BB99A88003E0BC6 /* SFMenuViewModelMock.swift in Sources */,
 				A31F976E2BB6FFE10029C02A /* SFErrorLabel.swift in Sources */,
 				A31F97682BB6F7BA0029C02A /* SFButton.swift in Sources */,
+				A32FB0E62BB7526C003E0BC6 /* SFMenuView.swift in Sources */,
+				A32FB10D2BB9EDB5003E0BC6 /* TrainingType.swift in Sources */,
+				A32FB0EA2BB75288003E0BC6 /* UserView.swift in Sources */,
+				A32FB0F72BB82479003E0BC6 /* SFMenuViewModel.swift in Sources */,
 				A31F976A2BB6FC160029C02A /* SFFonts.swift in Sources */,
+				A32FB0ED2BB7652C003E0BC6 /* UserViewModel.swift in Sources */,
 				A31F97662BB6F4FC0029C02A /* LoginViewModel.swift in Sources */,
 				A31F974F2BB6E5970029C02A /* ContentView.swift in Sources */,
 				A31F975F2BB6ECAE0029C02A /* SFTextField.swift in Sources */,
+				A32FB0E42BB751E5003E0BC6 /* SFTabView.swift in Sources */,
+				A32FB0E02BB745B7003E0BC6 /* SFSwitch.swift in Sources */,
+				A32FB10B2BB9E859003E0BC6 /* SFTrainingItemView.swift in Sources */,
 				A31F974D2BB6E5970029C02A /* StayFitApp.swift in Sources */,
+				A32FB1072BB9A89C003E0BC6 /* TrainingItem.swift in Sources */,
+				A32FB0F22BB821A1003E0BC6 /* StatisticsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

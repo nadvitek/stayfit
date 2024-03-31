@@ -5,17 +5,21 @@ class SFMenuViewModelMock: SFMenuViewModeling {
     
     // MARK: - Internal properties
     
-    var types: [String] = ["Running", "Swimming", "Yoga", "Lifting", "Soccer"]
-    var filteredType: String = ""
-    var filteredDate: String = ""
-    var filterActivate: Bool {
-        !filteredType.isEmpty || !filteredDate.isEmpty
+    var filteredType: TrainingType = .running
+    var filteredDate: Date = Date()
+    var filterActivated: Bool {
+        true
     }
+    var visibleData: [String : [TrainingItem]] = [
+        "March 2022" : [.mock(), .mock()],
+        "February 2022" : [.mock()]
+    ]
+    var dateFilterActivated: Bool = false
+    var typeFilterActivated: Bool = false
     
     // MARK: - Internal interface
     
     func clearFilter() {
-        filteredType = ""
-        filteredDate = ""
+        // do nothing
     }
 }
