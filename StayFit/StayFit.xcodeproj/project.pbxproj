@@ -37,6 +37,9 @@
 		A32FB10B2BB9E859003E0BC6 /* SFTrainingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32FB10A2BB9E859003E0BC6 /* SFTrainingItemView.swift */; };
 		A32FB10D2BB9EDB5003E0BC6 /* TrainingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32FB10C2BB9EDB5003E0BC6 /* TrainingType.swift */; };
 		A32FB1102BBA076C003E0BC6 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32FB10F2BBA076C003E0BC6 /* DateExtension.swift */; };
+		A32FB1132BBB1138003E0BC6 /* TrainingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32FB1122BBB1138003E0BC6 /* TrainingDetailView.swift */; };
+		A32FB1152BBB1198003E0BC6 /* TrainingDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32FB1142BBB1198003E0BC6 /* TrainingDetailViewModel.swift */; };
+		A32FB1172BBB1293003E0BC6 /* TrainingDetailViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32FB1162BBB1293003E0BC6 /* TrainingDetailViewModelMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +74,9 @@
 		A32FB10A2BB9E859003E0BC6 /* SFTrainingItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFTrainingItemView.swift; sourceTree = "<group>"; };
 		A32FB10C2BB9EDB5003E0BC6 /* TrainingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingType.swift; sourceTree = "<group>"; };
 		A32FB10F2BBA076C003E0BC6 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		A32FB1122BBB1138003E0BC6 /* TrainingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDetailView.swift; sourceTree = "<group>"; };
+		A32FB1142BBB1198003E0BC6 /* TrainingDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDetailViewModel.swift; sourceTree = "<group>"; };
+		A32FB1162BBB1293003E0BC6 /* TrainingDetailViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDetailViewModelMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,8 @@
 		A31F974B2BB6E5970029C02A /* StayFit */ = {
 			isa = PBXGroup;
 			children = (
+				A32409CA2BD4148E006C97DB /* New Group */,
+				A32FB1112BBB111D003E0BC6 /* Detail */,
 				A32FB0F52BB82466003E0BC6 /* Menu */,
 				A32FB0F02BB76BAA003E0BC6 /* Statistics */,
 				A32FB0EB2BB7616C003E0BC6 /* User */,
@@ -161,6 +169,13 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
+		A32409CA2BD4148E006C97DB /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		A32FB0EB2BB7616C003E0BC6 /* User */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +230,16 @@
 				A32FB10F2BBA076C003E0BC6 /* DateExtension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		A32FB1112BBB111D003E0BC6 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				A32FB1122BBB1138003E0BC6 /* TrainingDetailView.swift */,
+				A32FB1142BBB1198003E0BC6 /* TrainingDetailViewModel.swift */,
+				A32FB1162BBB1293003E0BC6 /* TrainingDetailViewModelMock.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,15 +314,18 @@
 			files = (
 				A31F97612BB6ECC60029C02A /* SFColors.swift in Sources */,
 				A32FB1102BBA076C003E0BC6 /* DateExtension.swift in Sources */,
+				A32FB1132BBB1138003E0BC6 /* TrainingDetailView.swift in Sources */,
 				A32FB0F42BB82388003E0BC6 /* StatisticsViewModelMock.swift in Sources */,
 				A32FB1052BB99FEC003E0BC6 /* SFDatePicker.swift in Sources */,
 				A31F975C2BB6EC840029C02A /* LoginView.swift in Sources */,
 				A32FB0F92BB82836003E0BC6 /* SFTypePicker.swift in Sources */,
 				A32FB1022BB99C06003E0BC6 /* SFCrossButton.swift in Sources */,
 				A32FB0EF2BB76667003E0BC6 /* UserViewModelMock.swift in Sources */,
+				A32FB1152BBB1198003E0BC6 /* TrainingDetailViewModel.swift in Sources */,
 				A32FB0E22BB74A84003E0BC6 /* LoginViewModelMock.swift in Sources */,
 				A32FB0E82BB7527E003E0BC6 /* StatisticsView.swift in Sources */,
 				A32FB1002BB99A88003E0BC6 /* SFMenuViewModelMock.swift in Sources */,
+				A32FB1172BBB1293003E0BC6 /* TrainingDetailViewModelMock.swift in Sources */,
 				A31F976E2BB6FFE10029C02A /* SFErrorLabel.swift in Sources */,
 				A31F97682BB6F7BA0029C02A /* SFButton.swift in Sources */,
 				A32FB0E62BB7526C003E0BC6 /* SFMenuView.swift in Sources */,

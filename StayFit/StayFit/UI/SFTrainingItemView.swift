@@ -56,19 +56,6 @@ struct SFTrainingItemView: View {
 
 #if DEBUG
 
-// MARK: - Mock data
-
-extension TrainingItem {
-    static func mock() -> TrainingItem {
-        .init(
-            trainingType: .running,
-            place: "Libeň",
-            notes: "balas",
-            date: .now
-        )
-    }
-}
-
 // MARK: - Previews
 
 #Preview {
