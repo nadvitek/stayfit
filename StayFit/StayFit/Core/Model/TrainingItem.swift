@@ -3,11 +3,12 @@ import SwiftUI
 
 struct TrainingItem: Identifiable {
     let id = UUID()
-    let trainingType: TrainingType
-    let place: String
-    let notes: String
-    let date: Date
-    let image: Image?
+    var trainingType: TrainingType
+    var place: String
+    var notes: String
+    var date: Date
+    var image: Image?
+    var isNotificationOn: Bool
 }
 
 #if DEBUG
@@ -21,7 +22,8 @@ extension TrainingItem {
             place: "Libeň",
             notes: "Náročný",
             date: .now,
-            image: Image(systemName: "plus")
+            image: Image(systemName: "plus"),
+            isNotificationOn: false
         )
     }
 }
