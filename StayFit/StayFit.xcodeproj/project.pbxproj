@@ -43,7 +43,7 @@
 		A39C207F2BE17967009D16C1 /* EditTrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39C207E2BE17967009D16C1 /* EditTrainingView.swift */; };
 		A39C20812BE17978009D16C1 /* EditTrainingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39C20802BE17978009D16C1 /* EditTrainingViewModel.swift */; };
 		A39C20832BE17982009D16C1 /* EditTrainingViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39C20822BE17982009D16C1 /* EditTrainingViewModelMock.swift */; };
-		A39C20852BE190D0009D16C1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A39C20842BE190D0009D16C1 /* GoogleService-Info.plist */; };
+		A39C20882BE195A1009D16C1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A39C20872BE195A1009D16C1 /* GoogleService-Info.plist */; };
 		A3BA83B52BD57CD6000250F6 /* NewTrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BA83B42BD57CD6000250F6 /* NewTrainingView.swift */; };
 		A3BA83B72BD57EE7000250F6 /* NewTrainingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BA83B62BD57EE7000250F6 /* NewTrainingViewModel.swift */; };
 		A3BA83B92BD58EBE000250F6 /* NewTrainingViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BA83B82BD58EBE000250F6 /* NewTrainingViewModelMock.swift */; };
@@ -87,7 +87,7 @@
 		A39C207E2BE17967009D16C1 /* EditTrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTrainingView.swift; sourceTree = "<group>"; };
 		A39C20802BE17978009D16C1 /* EditTrainingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTrainingViewModel.swift; sourceTree = "<group>"; };
 		A39C20822BE17982009D16C1 /* EditTrainingViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTrainingViewModelMock.swift; sourceTree = "<group>"; };
-		A39C20842BE190D0009D16C1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A39C20872BE195A1009D16C1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A3BA83B42BD57CD6000250F6 /* NewTrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTrainingView.swift; sourceTree = "<group>"; };
 		A3BA83B62BD57EE7000250F6 /* NewTrainingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTrainingViewModel.swift; sourceTree = "<group>"; };
 		A3BA83B82BD58EBE000250F6 /* NewTrainingViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTrainingViewModelMock.swift; sourceTree = "<group>"; };
@@ -123,7 +123,7 @@
 		A31F974B2BB6E5970029C02A /* StayFit */ = {
 			isa = PBXGroup;
 			children = (
-				A39C20842BE190D0009D16C1 /* GoogleService-Info.plist */,
+				A39C20872BE195A1009D16C1 /* GoogleService-Info.plist */,
 				A39C207D2BE17948009D16C1 /* EditTraining */,
 				A32409CA2BD4148E006C97DB /* NewTraining */,
 				A32FB1112BBB111D003E0BC6 /* Detail */,
@@ -315,6 +315,9 @@
 				Base,
 			);
 			mainGroup = A31F97402BB6E5970029C02A;
+			packageReferences = (
+				A39C20862BE19570009D16C1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = A31F974A2BB6E5970029C02A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -331,7 +334,7 @@
 			files = (
 				A31F97542BB6E5990029C02A /* Preview Assets.xcassets in Resources */,
 				A31F97512BB6E5990029C02A /* Assets.xcassets in Resources */,
-				A39C20852BE190D0009D16C1 /* GoogleService-Info.plist in Resources */,
+				A39C20882BE195A1009D16C1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,6 +589,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A39C20862BE19570009D16C1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.25.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = A31F97412BB6E5970029C02A /* Project object */;
 }
