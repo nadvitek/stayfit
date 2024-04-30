@@ -40,6 +40,13 @@
 		A32FB1132BBB1138003E0BC6 /* TrainingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32FB1122BBB1138003E0BC6 /* TrainingDetailView.swift */; };
 		A32FB1152BBB1198003E0BC6 /* TrainingDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32FB1142BBB1198003E0BC6 /* TrainingDetailViewModel.swift */; };
 		A32FB1172BBB1293003E0BC6 /* TrainingDetailViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32FB1162BBB1293003E0BC6 /* TrainingDetailViewModelMock.swift */; };
+		A39C207F2BE17967009D16C1 /* EditTrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39C207E2BE17967009D16C1 /* EditTrainingView.swift */; };
+		A39C20812BE17978009D16C1 /* EditTrainingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39C20802BE17978009D16C1 /* EditTrainingViewModel.swift */; };
+		A39C20832BE17982009D16C1 /* EditTrainingViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39C20822BE17982009D16C1 /* EditTrainingViewModelMock.swift */; };
+		A39C20852BE190D0009D16C1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A39C20842BE190D0009D16C1 /* GoogleService-Info.plist */; };
+		A3BA83B52BD57CD6000250F6 /* NewTrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BA83B42BD57CD6000250F6 /* NewTrainingView.swift */; };
+		A3BA83B72BD57EE7000250F6 /* NewTrainingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BA83B62BD57EE7000250F6 /* NewTrainingViewModel.swift */; };
+		A3BA83B92BD58EBE000250F6 /* NewTrainingViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BA83B82BD58EBE000250F6 /* NewTrainingViewModelMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +84,13 @@
 		A32FB1122BBB1138003E0BC6 /* TrainingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDetailView.swift; sourceTree = "<group>"; };
 		A32FB1142BBB1198003E0BC6 /* TrainingDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDetailViewModel.swift; sourceTree = "<group>"; };
 		A32FB1162BBB1293003E0BC6 /* TrainingDetailViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDetailViewModelMock.swift; sourceTree = "<group>"; };
+		A39C207E2BE17967009D16C1 /* EditTrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTrainingView.swift; sourceTree = "<group>"; };
+		A39C20802BE17978009D16C1 /* EditTrainingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTrainingViewModel.swift; sourceTree = "<group>"; };
+		A39C20822BE17982009D16C1 /* EditTrainingViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTrainingViewModelMock.swift; sourceTree = "<group>"; };
+		A39C20842BE190D0009D16C1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A3BA83B42BD57CD6000250F6 /* NewTrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTrainingView.swift; sourceTree = "<group>"; };
+		A3BA83B62BD57EE7000250F6 /* NewTrainingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTrainingViewModel.swift; sourceTree = "<group>"; };
+		A3BA83B82BD58EBE000250F6 /* NewTrainingViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTrainingViewModelMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +123,9 @@
 		A31F974B2BB6E5970029C02A /* StayFit */ = {
 			isa = PBXGroup;
 			children = (
-				A32409CA2BD4148E006C97DB /* New Group */,
+				A39C20842BE190D0009D16C1 /* GoogleService-Info.plist */,
+				A39C207D2BE17948009D16C1 /* EditTraining */,
+				A32409CA2BD4148E006C97DB /* NewTraining */,
 				A32FB1112BBB111D003E0BC6 /* Detail */,
 				A32FB0F52BB82466003E0BC6 /* Menu */,
 				A32FB0F02BB76BAA003E0BC6 /* Statistics */,
@@ -169,11 +185,14 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
-		A32409CA2BD4148E006C97DB /* New Group */ = {
+		A32409CA2BD4148E006C97DB /* NewTraining */ = {
 			isa = PBXGroup;
 			children = (
+				A3BA83B42BD57CD6000250F6 /* NewTrainingView.swift */,
+				A3BA83B62BD57EE7000250F6 /* NewTrainingViewModel.swift */,
+				A3BA83B82BD58EBE000250F6 /* NewTrainingViewModelMock.swift */,
 			);
-			path = "New Group";
+			path = NewTraining;
 			sourceTree = "<group>";
 		};
 		A32FB0EB2BB7616C003E0BC6 /* User */ = {
@@ -242,6 +261,16 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
+		A39C207D2BE17948009D16C1 /* EditTraining */ = {
+			isa = PBXGroup;
+			children = (
+				A39C207E2BE17967009D16C1 /* EditTrainingView.swift */,
+				A39C20802BE17978009D16C1 /* EditTrainingViewModel.swift */,
+				A39C20822BE17982009D16C1 /* EditTrainingViewModelMock.swift */,
+			);
+			path = EditTraining;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -302,6 +331,7 @@
 			files = (
 				A31F97542BB6E5990029C02A /* Preview Assets.xcassets in Resources */,
 				A31F97512BB6E5990029C02A /* Assets.xcassets in Resources */,
+				A39C20852BE190D0009D16C1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +348,7 @@
 				A32FB0F42BB82388003E0BC6 /* StatisticsViewModelMock.swift in Sources */,
 				A32FB1052BB99FEC003E0BC6 /* SFDatePicker.swift in Sources */,
 				A31F975C2BB6EC840029C02A /* LoginView.swift in Sources */,
+				A39C20832BE17982009D16C1 /* EditTrainingViewModelMock.swift in Sources */,
 				A32FB0F92BB82836003E0BC6 /* SFTypePicker.swift in Sources */,
 				A32FB1022BB99C06003E0BC6 /* SFCrossButton.swift in Sources */,
 				A32FB0EF2BB76667003E0BC6 /* UserViewModelMock.swift in Sources */,
@@ -327,22 +358,27 @@
 				A32FB1002BB99A88003E0BC6 /* SFMenuViewModelMock.swift in Sources */,
 				A32FB1172BBB1293003E0BC6 /* TrainingDetailViewModelMock.swift in Sources */,
 				A31F976E2BB6FFE10029C02A /* SFErrorLabel.swift in Sources */,
+				A39C207F2BE17967009D16C1 /* EditTrainingView.swift in Sources */,
 				A31F97682BB6F7BA0029C02A /* SFButton.swift in Sources */,
 				A32FB0E62BB7526C003E0BC6 /* SFMenuView.swift in Sources */,
+				A3BA83B52BD57CD6000250F6 /* NewTrainingView.swift in Sources */,
 				A32FB10D2BB9EDB5003E0BC6 /* TrainingType.swift in Sources */,
 				A32FB0EA2BB75288003E0BC6 /* UserView.swift in Sources */,
 				A32FB0F72BB82479003E0BC6 /* SFMenuViewModel.swift in Sources */,
 				A31F976A2BB6FC160029C02A /* SFFonts.swift in Sources */,
 				A32FB0ED2BB7652C003E0BC6 /* UserViewModel.swift in Sources */,
+				A39C20812BE17978009D16C1 /* EditTrainingViewModel.swift in Sources */,
 				A31F97662BB6F4FC0029C02A /* LoginViewModel.swift in Sources */,
 				A31F974F2BB6E5970029C02A /* ContentView.swift in Sources */,
 				A31F975F2BB6ECAE0029C02A /* SFTextField.swift in Sources */,
+				A3BA83B72BD57EE7000250F6 /* NewTrainingViewModel.swift in Sources */,
 				A32FB0E42BB751E5003E0BC6 /* SFTabView.swift in Sources */,
 				A32FB0E02BB745B7003E0BC6 /* SFSwitch.swift in Sources */,
 				A32FB10B2BB9E859003E0BC6 /* SFTrainingItemView.swift in Sources */,
 				A31F974D2BB6E5970029C02A /* StayFitApp.swift in Sources */,
 				A32FB1072BB9A89C003E0BC6 /* TrainingItem.swift in Sources */,
 				A32FB0F22BB821A1003E0BC6 /* StatisticsViewModel.swift in Sources */,
+				A3BA83B92BD58EBE000250F6 /* NewTrainingViewModelMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,6 +515,7 @@
 				DEVELOPMENT_TEAM = 6DLYAQP65H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Capture the Training moment";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -508,6 +545,7 @@
 				DEVELOPMENT_TEAM = 6DLYAQP65H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Capture the Training moment";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
