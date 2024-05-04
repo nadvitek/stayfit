@@ -26,6 +26,8 @@ struct LoginView: View {
                     .font(.semiMedium)
                 
                 SFTextField(text: $viewModel.email, placeholder: "example@gmail.com", type: .large)
+                    .keyboardType(.emailAddress)
+                    .textInputAutocapitalization(.never)
             }
             
             VStack(alignment: .leading, spacing: 8) {
@@ -33,7 +35,9 @@ struct LoginView: View {
                     .foregroundStyle(.black)
                     .font(.semiMedium)
                 
-                SFTextField(text: $viewModel.password, placeholder: "example123", type: .large)
+                SFTextField(text: $viewModel.password, placeholder: "example123", type: .large, isSecure: true)
+                    .keyboardType(.default)
+                    .textInputAutocapitalization(.never)
             }
             
             Rectangle()
@@ -65,9 +69,16 @@ struct LoginView: View {
         .padding(.horizontal, 16)
         .animation(.easeOut(duration: 0.5), value: viewModel.isErrorLabelVisible)
         .animation(.easeOut(duration: 0.5), value: viewModel.isLogging)
+        .background(.white)
     }
 }
+
+// MARK: - Previews
+
+#if DEBUG
 
 #Preview {
     LoginView(viewModel: LoginViewModelMock())
 }
+
+#endif

@@ -2,6 +2,8 @@ import SwiftUI
 
 struct SFMenuView: View {
     
+    // MARK: - Internal properties
+    
     @State private(set) var viewModel: SFMenuViewModeling
     
     // MARK: - UI
@@ -16,6 +18,7 @@ struct SFMenuView: View {
                 
                 scrollViewPart
             }
+            .background(.white)
         }
     }
     
@@ -29,8 +32,7 @@ struct SFMenuView: View {
             Spacer()
             
             NavigationLink {
-                // TODO: - Add Concrete View
-                EmptyView()
+                NewTrainingView(viewModel: NewTrainingViewModel())
             } label: {
                 Image(systemName: "plus")
                     .resizable()
@@ -83,7 +85,7 @@ struct SFMenuView: View {
     private func itemsPart(_ values: [TrainingItem]) -> some View {
         ForEach(values) { value in
             NavigationLink {
-                // TODO: - Implement Detail Empty
+                TrainingDetailView(viewModel: TrainingDetailViewModel(trainingItem: value))
             } label: {
                 SFTrainingItemView(trainingItem: value)
             }

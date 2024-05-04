@@ -3,7 +3,8 @@ import FirebaseCore
 import FirebaseFirestore
 
 protocol DataManaging {
-    func retrieveTrainingList()
+    func retrieveTrainingList() async throws -> [QueryDocumentSnapshot]
+    func createNewTraining() async
 }
 
 class DataManager: DataManaging {
@@ -20,14 +21,12 @@ class DataManager: DataManaging {
     
     // MARK: - Internal interface
     
-    func retrieveTrainingList() async {
-        do {
-          let snapshot = try await fireStore.collection("users").getDocuments()
-          for document in snapshot.documents {
-            print("\(document.documentID) => \(document.data())")
-          }
-        } catch {
-          print("Error getting documents: \(error)")
-        }
+    func retrieveTrainingList() async throws -> [QueryDocumentSnapshot] {
+        guard let userId = UserDefaults.standard.string(forKey: "userId") else { return [] }
+        return try await fireStore.collection("trainingList_" + userId).getDocuments().documents
+    }
+    
+    func createNewTraining() async {
+        // TODO: - Implement
     }
 }

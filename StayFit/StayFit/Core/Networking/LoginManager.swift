@@ -23,7 +23,7 @@ class LoginManager: LoginManaging {
         ) { authResult, error in
             if error == nil {
                 UserDefaults.standard.set(loginModel.email, forKey: "userEmail")
-                UserDefaults.standard.set(true, forKey: "isLogged")
+                UserDefaults.standard.set(authResult?.user.uid, forKey: "userId")
             } else {
                 failureHandler()
             }
@@ -39,7 +39,7 @@ class LoginManager: LoginManaging {
         ) { authResult, error in
             if error == nil {
                 UserDefaults.standard.set(loginModel.email, forKey: "userEmail")
-                UserDefaults.standard.set(true, forKey: "isLogged")
+                UserDefaults.standard.set(authResult?.user.uid, forKey: "userId")
             } else {
                 failureHandler()
             }

@@ -8,6 +8,8 @@ protocol SFMenuViewModeling {
     var typeFilterActivated: Bool { get set }
     var visibleData: [String: [TrainingItem]] { get }
     
+    var isLoading: Bool { get set }
+    
     func clearFilter()
 }
 
@@ -35,9 +37,20 @@ class SFMenuViewModel: SFMenuViewModeling {
     var dateFilterActivated: Bool = false
     var typeFilterActivated: Bool = false
     
+    var isLoading: Bool = true
+    
     // MARK: - Private properties
     
     private var data: [TrainingItem] = []
+    private let dependencies: AppDependency
+    
+    // MARK: - Initializers
+    
+    init(dependencies: AppDependency) {
+        self.dependencies = dependencies
+        
+        loadData()
+    }
     
     // MARK: - Internal interface
     
@@ -47,6 +60,17 @@ class SFMenuViewModel: SFMenuViewModeling {
     }
     
     // MARK: - Private helpers
+    
+    private func loadData() {
+        Task {
+            do {
+                let documents = try await dependencies.dataManager.retrieveTrainingList().map(TrainingItemMapper.mapToTrainingItem)
+                isLoading = false
+            } catch {
+                print(error)
+            }
+        }
+    }
     
     private func sortData() {
         data.sort { $0.date > $1.date }

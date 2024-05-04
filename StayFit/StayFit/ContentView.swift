@@ -2,13 +2,13 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @AppStorage("isLogged") var isLogged = true
+    @AppStorage("userId") var userId: String = ""
     
     var body: some View {
-        if isLogged {
-            SFTabView()
-        } else {
+        if userId.isEmpty {
             LoginView(viewModel: LoginViewModel(dependencies: appDependencies))
+        } else {
+            SFTabView()
         }
     }
 }

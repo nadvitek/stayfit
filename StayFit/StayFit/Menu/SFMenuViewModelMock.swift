@@ -17,6 +17,8 @@ class SFMenuViewModelMock: SFMenuViewModeling {
     var dateFilterActivated: Bool = false
     var typeFilterActivated: Bool = false
     
+    var isLoading: Bool = false
+    
     // MARK: - Internal interface
     
     func clearFilter() {
