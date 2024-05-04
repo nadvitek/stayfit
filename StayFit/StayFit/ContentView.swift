@@ -8,7 +8,7 @@ struct ContentView: View {
         if isLogged {
             SFTabView()
         } else {
-            LoginView(viewModel: LoginViewModel())
+            LoginView(viewModel: LoginViewModel(dependencies: appDependencies))
         }
     }
 }

@@ -20,9 +20,14 @@ class LoginViewModel: LoginViewModeling {
     var isLogging: Bool = true
     var isErrorLabelVisible: Bool = false
     
+    // MARK: - Private properties
+    
+    private let dependencies: AppDependency
+
     // MARK: - Initializers
     
-    init() {
+    init(dependencies: AppDependency) {
+        self.dependencies = dependencies
     }
     
     // MARK: - Internal interface
@@ -33,18 +38,27 @@ class LoginViewModel: LoginViewModeling {
         if isLogging {
             login()
         } else {
-            
+            registrate()
         }
     }
     
     // MARK: - Private interface
     
     private func login() {
-        UserDefaults.standard.set(email, forKey: "userEmail")
-        UserDefaults.standard.set(true, forKey: "isLogged")
+        isErrorLabelVisible = false
+        let loginModel = LoginModel(email: email, password: password)
+        dependencies.loginManager.logIn(loginModel) { [weak self] in
+            guard let self else { return }
+            self.isErrorLabelVisible = true
+        }
     }
     
     private func registrate() {
-        
+        isErrorLabelVisible = false
+        let loginModel = LoginModel(email: email, password: password)
+        dependencies.loginManager.registrate(loginModel) { [weak self] in
+            guard let self else { return }
+            self.isErrorLabelVisible = true
+        }
     }
 }

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A30B0A962BE62452000A814E /* AppDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30B0A952BE62452000A814E /* AppDependency.swift */; };
+		A30B0A992BE62538000A814E /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30B0A982BE62538000A814E /* LoginManager.swift */; };
+		A30B0A9B2BE6258D000A814E /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30B0A9A2BE6258D000A814E /* LoginModel.swift */; };
+		A30B0A9D2BE65573000A814E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30B0A9C2BE65573000A814E /* DataManager.swift */; };
 		A31F974D2BB6E5970029C02A /* StayFitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31F974C2BB6E5970029C02A /* StayFitApp.swift */; };
 		A31F974F2BB6E5970029C02A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31F974E2BB6E5970029C02A /* ContentView.swift */; };
 		A31F97512BB6E5990029C02A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A31F97502BB6E5990029C02A /* Assets.xcassets */; };
@@ -54,6 +58,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A30B0A952BE62452000A814E /* AppDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependency.swift; sourceTree = "<group>"; };
+		A30B0A982BE62538000A814E /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		A30B0A9A2BE6258D000A814E /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		A30B0A9C2BE65573000A814E /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		A31F97492BB6E5970029C02A /* StayFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StayFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A31F974C2BB6E5970029C02A /* StayFitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StayFitApp.swift; sourceTree = "<group>"; };
 		A31F974E2BB6E5970029C02A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -112,6 +120,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A30B0A972BE6252B000A814E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				A30B0A982BE62538000A814E /* LoginManager.swift */,
+				A30B0A9C2BE65573000A814E /* DataManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		A31F97402BB6E5970029C02A = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +163,7 @@
 				A31F97502BB6E5990029C02A /* Assets.xcassets */,
 				A31F97522BB6E5990029C02A /* Preview Content */,
 				A32FB0E32BB751E5003E0BC6 /* SFTabView.swift */,
+				A30B0A952BE62452000A814E /* AppDependency.swift */,
 			);
 			path = StayFit;
 			sourceTree = "<group>";
@@ -187,6 +205,7 @@
 		A31F97622BB6ED820029C02A /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				A30B0A972BE6252B000A814E /* Networking */,
 				A32FB10E2BBA0763003E0BC6 /* Extension */,
 				A32FB0FA2BB8A2AB003E0BC6 /* Model */,
 			);
@@ -238,6 +257,7 @@
 			children = (
 				A32FB1062BB9A89C003E0BC6 /* TrainingItem.swift */,
 				A32FB10C2BB9EDB5003E0BC6 /* TrainingType.swift */,
+				A30B0A9A2BE6258D000A814E /* LoginModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -364,6 +384,9 @@
 				A32FB1132BBB1138003E0BC6 /* TrainingDetailView.swift in Sources */,
 				A32FB0F42BB82388003E0BC6 /* StatisticsViewModelMock.swift in Sources */,
 				A32FB1052BB99FEC003E0BC6 /* SFDatePicker.swift in Sources */,
+				A30B0A9B2BE6258D000A814E /* LoginModel.swift in Sources */,
+				A30B0A9D2BE65573000A814E /* DataManager.swift in Sources */,
+				A30B0A992BE62538000A814E /* LoginManager.swift in Sources */,
 				A31F975C2BB6EC840029C02A /* LoginView.swift in Sources */,
 				A39C20832BE17982009D16C1 /* EditTrainingViewModelMock.swift in Sources */,
 				A32FB0F92BB82836003E0BC6 /* SFTypePicker.swift in Sources */,
@@ -383,6 +406,7 @@
 				A32FB0EA2BB75288003E0BC6 /* UserView.swift in Sources */,
 				A32FB0F72BB82479003E0BC6 /* SFMenuViewModel.swift in Sources */,
 				A31F976A2BB6FC160029C02A /* SFFonts.swift in Sources */,
+				A30B0A962BE62452000A814E /* AppDependency.swift in Sources */,
 				A32FB0ED2BB7652C003E0BC6 /* UserViewModel.swift in Sources */,
 				A39C20812BE17978009D16C1 /* EditTrainingViewModel.swift in Sources */,
 				A31F97662BB6F4FC0029C02A /* LoginViewModel.swift in Sources */,

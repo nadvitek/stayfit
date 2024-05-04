@@ -10,7 +10,7 @@ struct SFTabView: View {
     
     var body: some View {
         TabView {
-            SFMenuView(viewModel: SFMenuViewModel())
+            SFMenuView(viewModel: SFMenuViewModel(dependencies: appDependencies))
                 .tabItem {
                     Label("Menu", systemImage: "doc.fill")
                 }
