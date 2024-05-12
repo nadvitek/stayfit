@@ -34,7 +34,7 @@ struct UserView: View {
             }
             
             SFButton(text: "Change Password") {
-                // TODO: - Implement changing password
+                viewModel.changePassword()
             }
             .padding(.top, 32)
             

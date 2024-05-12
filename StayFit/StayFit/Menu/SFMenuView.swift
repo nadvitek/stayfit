@@ -19,6 +19,9 @@ struct SFMenuView: View {
                 scrollViewPart
             }
             .background(.white)
+            .onAppear {
+                viewModel.loadData()
+            }
         }
     }
     
@@ -32,7 +35,7 @@ struct SFMenuView: View {
             Spacer()
             
             NavigationLink {
-                NewTrainingView(viewModel: NewTrainingViewModel())
+                NewTrainingView(viewModel: NewTrainingViewModel(dependencies: appDependencies))
             } label: {
                 Image(systemName: "plus")
                     .resizable()
@@ -85,7 +88,7 @@ struct SFMenuView: View {
     private func itemsPart(_ values: [TrainingItem]) -> some View {
         ForEach(values) { value in
             NavigationLink {
-                TrainingDetailView(viewModel: TrainingDetailViewModel(trainingItem: value))
+                TrainingDetailView(viewModel: TrainingDetailViewModel(dependencies: appDependencies, trainingId: value.id))
             } label: {
                 SFTrainingItemView(trainingItem: value)
             }

@@ -7,12 +7,37 @@ enum TrainingItemMapper {
         let data = document.data()
         
         return TrainingItem(
+            id: data[FirebaseKeys.id] as? String ?? "",
             trainingType: mapToTrainingType(data[FirebaseKeys.trainingType] as? String),
             place: data[FirebaseKeys.place] as? String ?? "",
             notes: data[FirebaseKeys.notes] as? String ?? "",
             date: mapToDate(data[FirebaseKeys.date] as? String ?? ""),
             isNotificationOn: data[FirebaseKeys.isNotificationOn] as? Bool ?? false
         )
+    }
+    
+    static func mapToTrainingItem(_ document: DocumentSnapshot) -> TrainingItem {
+        let data = document.data()
+        
+        return TrainingItem(
+            id: data?[FirebaseKeys.id] as? String ?? "",
+            trainingType: mapToTrainingType(data?[FirebaseKeys.trainingType] as? String),
+            place: data?[FirebaseKeys.place] as? String ?? "",
+            notes: data?[FirebaseKeys.notes] as? String ?? "",
+            date: mapToDate(data?[FirebaseKeys.date] as? String ?? ""),
+            isNotificationOn: data?[FirebaseKeys.isNotificationOn] as? Bool ?? false
+        )
+    }
+    
+    static func mapToFirebase(_ trainingItem: TrainingItem) -> [String: Any] {
+        return [
+            FirebaseKeys.id: trainingItem.id,
+            FirebaseKeys.trainingType: trainingItem.trainingType.rawValue.lowercased(),
+            FirebaseKeys.place: trainingItem.place,
+            FirebaseKeys.notes: trainingItem.notes,
+            FirebaseKeys.date: trainingItem.date.parseDateToString(),
+            FirebaseKeys.isNotificationOn: trainingItem.isNotificationOn
+        ]
     }
     
     private static func mapToTrainingType(_ typeAsString: String?) -> TrainingType {

@@ -94,7 +94,7 @@ struct EditTrainingView: View {
                 }
                 
                 SFButton(text: "Create") {
-                    // Implement
+                    viewModel
                 }
             }
         }
@@ -119,6 +119,9 @@ struct EditTrainingView: View {
                 }
             }
         }
+        .onChange(of: viewModel.editCompleted, {
+            dismiss()
+        })
         .padding(.horizontal, 16)
         .background(.white)
     }

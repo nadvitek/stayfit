@@ -11,6 +11,8 @@ protocol NewTrainingViewModeling {
     var isNotificationOn: Bool { get set }
     var image: Image? { get set }
     
+    var creationCompleted: Bool { get }
+    
     func createTraining()
 }
 
@@ -28,6 +30,8 @@ class NewTrainingViewModel: NewTrainingViewModeling {
     var isNotificationOn: Bool = false
     var image: Image? = nil
     
+    var creationCompleted: Bool = false
+    
     // MARK: - Private properties
     
     private let dependencies: AppDependency
@@ -41,14 +45,17 @@ class NewTrainingViewModel: NewTrainingViewModeling {
     // MARK: - Internal interface
     
     func createTraining() {
-        dependencies.dataManager.createNewTraining()
-        TrainingItem(
-            trainingType: <#T##TrainingType#>,
-            place: <#T##String#>,
-            notes: <#T##String#>,
-            date: <#T##Date#>,
-            image: <#T##Image?#>,
-            isNotificationOn: <#T##Bool#>
+        let training = TrainingItem(
+            trainingType: trainingType,
+            place: place,
+            notes: notes,
+            date: date,
+            isNotificationOn: isNotificationOn
         )
+
+        Task {
+            await dependencies.dataManager.saveTraining(training)
+            creationCompleted = true
+        }
     }
 }

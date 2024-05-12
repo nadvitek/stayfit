@@ -11,6 +11,7 @@ protocol SFMenuViewModeling {
     var isLoading: Bool { get set }
     
     func clearFilter()
+    func loadData()
 }
 
 @Observable
@@ -48,8 +49,6 @@ class SFMenuViewModel: SFMenuViewModeling {
     
     init(dependencies: AppDependency) {
         self.dependencies = dependencies
-        
-        loadData()
     }
     
     // MARK: - Internal interface
@@ -58,19 +57,19 @@ class SFMenuViewModel: SFMenuViewModeling {
         dateFilterActivated = false
         typeFilterActivated = false
     }
-    
-    // MARK: - Private helpers
-    
-    private func loadData() {
+
+    func loadData() {
         Task {
             do {
-                let documents = try await dependencies.dataManager.retrieveTrainingList().map(TrainingItemMapper.mapToTrainingItem)
+                data = try await dependencies.dataManager.retrieveTrainingList().map(TrainingItemMapper.mapToTrainingItem)
                 isLoading = false
             } catch {
                 print(error)
             }
         }
     }
+    
+    // MARK: - Private helpers
     
     private func sortData() {
         data.sort { $0.date > $1.date }

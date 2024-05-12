@@ -24,4 +24,8 @@ class SFMenuViewModelMock: SFMenuViewModeling {
     func clearFilter() {
         // do nothing
     }
+
+    func loadData() {
+        // do nothing
+    }
 }

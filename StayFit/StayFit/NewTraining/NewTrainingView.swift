@@ -119,6 +119,9 @@ struct NewTrainingView: View {
                 }
             }
         }
+        .onChange(of: viewModel.creationCompleted) {
+            dismiss()
+        }
         .background(.white)
     }
 }

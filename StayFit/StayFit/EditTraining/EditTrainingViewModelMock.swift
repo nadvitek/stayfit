@@ -9,6 +9,8 @@ class EditTrainingViewModelMock: EditTrainingViewModeling {
     var typeSelected: Bool = false
     var dateSelected: Bool = false
     var isNotificationOn: Bool = false
+
+    var editCompleted: Bool = false
     
     // MARK: - Initializers
     
@@ -16,5 +18,9 @@ class EditTrainingViewModelMock: EditTrainingViewModeling {
         trainingItem: TrainingItem = .mock()
     ) {
         self.trainingItem = trainingItem
+    }
+
+    func editTraining() {
+        // do nothing
     }
 }

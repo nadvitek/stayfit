@@ -6,6 +6,7 @@ protocol UserViewModeling {
     var password: String { get set }
     
     func logout()
+    func changePassword()
 }
 
 @Observable
@@ -18,14 +19,23 @@ class UserViewModel: UserViewModeling {
     
     // MARK: - Initializers
     
-    init(email: String) {
+    private var dependencies: AppDependency
+    
+    init(
+        dependencies: AppDependency,
+        email: String
+    ) {
+        self.dependencies = dependencies
         self.email = email
     }
     
     // MARK: - Internal interface
     
     func logout() {
-        // TODO: - Add Dependencies and add this method to DI
-        UserDefaults.standard.setValue("", forKey: "userId")
+        dependencies.loginManager.logout()
+    }
+    
+    func changePassword() {
+        
     }
 }

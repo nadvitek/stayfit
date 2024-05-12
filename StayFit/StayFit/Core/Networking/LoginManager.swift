@@ -4,6 +4,8 @@ import FirebaseAuth
 protocol LoginManaging {
     func registrate(_ loginModel: LoginModel, failureHandler: @escaping () -> Void)
     func logIn(_ loginModel: LoginModel, failureHandler: @escaping () -> Void)
+    func changePassword(_ password: String, completionHandler: @escaping () -> Void)
+    func logout()
 }
 
 class LoginManager: LoginManaging {
@@ -44,5 +46,15 @@ class LoginManager: LoginManaging {
                 failureHandler()
             }
         }
+    }
+    
+    func changePassword(_ password: String, completionHandler: @escaping () -> Void) {
+        Auth.auth().currentUser?.updatePassword(to: password) { error in
+            
+        }
+    }
+    
+    func logout() {
+        UserDefaults.standard.setValue("", forKey: "userId")
     }
 }

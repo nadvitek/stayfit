@@ -15,6 +15,8 @@ class NewTrainingViewModelMock: NewTrainingViewModeling {
     var isNotificationOn: Bool = false
     var image: Image? = nil
     
+    var creationCompleted: Bool = false
+    
     // MARK: - Initializers
     
     init(
@@ -27,5 +29,9 @@ class NewTrainingViewModelMock: NewTrainingViewModeling {
         self.place = place
         self.date = date
         self.notes = notes
+    }
+    
+    func createTraining() {
+        // do nothing
     }
 }

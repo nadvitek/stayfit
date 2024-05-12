@@ -1,7 +1,9 @@
 import Foundation
 
 protocol TrainingDetailViewModeling {
-    var trainingItem: TrainingItem { get }
+    var trainingItem: TrainingItem? { get }
+    
+    func loadTraining()
 }
 
 @Observable
@@ -9,11 +11,28 @@ class TrainingDetailViewModel: TrainingDetailViewModeling {
     
     // MARK: - Internal properties
     
-    var trainingItem: TrainingItem
+    var trainingItem: TrainingItem?
+    
+    // MARK: - Private proeperties
+    
+    private var trainingId: String
+    private var dependencies: AppDependency
     
     // MARK: - Initializers
     
-    init(trainingItem: TrainingItem) {
-        self.trainingItem = trainingItem
+    init(
+        dependencies: AppDependency,
+        trainingId: String
+    ) {
+        self.trainingId = trainingId
+        self.dependencies = dependencies
+    }
+    
+    // MARK: - Private helpers
+    
+    func loadTraining() {
+        Task {
+            trainingItem = await dependencies.dataManager.retrieveTraining(of: trainingId).map(TrainingItemMapper.mapToTrainingItem)
+        }
     }
 }

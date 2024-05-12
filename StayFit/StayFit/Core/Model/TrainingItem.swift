@@ -2,7 +2,7 @@ import Foundation
 import SwiftUI
 
 struct TrainingItem: Identifiable {
-    let id = UUID()
+    var id = UUID().uuidString
     var trainingType: TrainingType
     var place: String
     var notes: String

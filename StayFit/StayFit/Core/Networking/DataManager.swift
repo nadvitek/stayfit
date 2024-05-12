@@ -4,7 +4,8 @@ import FirebaseFirestore
 
 protocol DataManaging {
     func retrieveTrainingList() async throws -> [QueryDocumentSnapshot]
-    func createNewTraining() async
+    func saveTraining(_ trainingItem: TrainingItem) async
+    func retrieveTraining(of id: String) async -> DocumentSnapshot?
 }
 
 class DataManager: DataManaging {
@@ -26,7 +27,36 @@ class DataManager: DataManaging {
         return try await fireStore.collection("trainingList_" + userId).getDocuments().documents
     }
     
-    func createNewTraining() async {
-        // TODO: - Implement
+    func saveTraining(_ trainingItem: TrainingItem) async {
+        guard let userId = UserDefaults.standard.string(forKey: "userId") else { return }
+        let data = TrainingItemMapper.mapToFirebase(trainingItem)
+
+        do {
+            try await fireStore.collection("trainingList_" + userId)
+                .document(trainingItem.id)
+                .setData(data)
+        } catch {
+            print("Error writing document: \(error)")
+        }
+    }
+    
+    func retrieveTraining(of id: String) async -> DocumentSnapshot? {
+        guard let userId = UserDefaults.standard.string(forKey: "userId") else { return nil }
+        
+        do {
+            let document = try await fireStore.collection("trainingList_" + userId)
+                .document(id)
+                .getDocument()
+            
+            if document.exists {
+                return document
+            } else {
+                print("Document doesn't exit")
+            }
+        } catch {
+            print("Error getting document: \(error)")
+        }
+        
+        return nil
     }
 }

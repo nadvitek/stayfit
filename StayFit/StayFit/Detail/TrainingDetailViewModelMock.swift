@@ -2,10 +2,10 @@ import Foundation
 
 @Observable
 class TrainingDetailViewModelMock: TrainingDetailViewModeling {
-    
+
     // MARK: - Internal properties
     
-    var trainingItem: TrainingItem
+    var trainingItem: TrainingItem?
     
     // MARK: - Initializers
     
