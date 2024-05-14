@@ -21,9 +21,17 @@ class NewTrainingViewModel: NewTrainingViewModeling {
     
     // MARK: - Internal properties
     
-    var trainingType: TrainingType = .lifting
+    var trainingType: TrainingType = .lifting {
+        didSet {
+            typeSelected = true
+        }
+    }
     var place: String = ""
-    var date: Date = .now
+    var date: Date = .now {
+        didSet {
+            dateSelected = true
+        }
+    }
     var notes: String = ""
     var typeSelected: Bool = false
     var dateSelected: Bool = false
@@ -52,6 +60,10 @@ class NewTrainingViewModel: NewTrainingViewModeling {
             date: date,
             isNotificationOn: isNotificationOn
         )
+        
+        if isNotificationOn {
+            dependencies.notificationManager.scheduleLocalNotification(training)
+        }
 
         Task {
             await dependencies.dataManager.saveTraining(training)

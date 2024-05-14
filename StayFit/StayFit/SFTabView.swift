@@ -15,12 +15,12 @@ struct SFTabView: View {
                     Label("Menu", systemImage: "doc.fill")
                 }
             
-            StatisticsView(viewModel: StatisticsViewModel())
+            StatisticsView(viewModel: StatisticsViewModel(dependencies: appDependencies))
                 .tabItem {
                     Label("Statistics", systemImage: "waveform")
                 }
             
-            UserView(viewModel: UserViewModel(email: userEmail))
+            UserView(viewModel: UserViewModel(dependencies: appDependencies, email: userEmail))
                 .tabItem {
                     Label("User", systemImage: "person.crop.circle")
                 }

@@ -51,8 +51,7 @@ struct NewTrainingView: View {
                     VStack(alignment: .leading, spacing: 16) {
                         Text("Date")
                             .font(.semiMedium)
-                        
-                        
+
                         SFDatePicker(name: viewModel.dateSelected ?  viewModel.date.parseDateToString() : "Date", picked: $viewModel.date)
                     }
                     .padding(.top, 16)
@@ -87,14 +86,25 @@ struct NewTrainingView: View {
                     }
                     .padding(.top, 16)
                 } else {
-                    SFButton(text: "Add Photo") {
-                        // Implement
+                    NavigationLink {
+                        CameraView(viewModel: CameraViewModel())
+                    } label: {
+                        SFButton(text: "Add Photo") {
+                            
+                        }
                     }
+                    .frame(maxWidth: .infinity, alignment: .center)
+
+                    SFButton(text: "Add Photo") {
+                        
+                    }
+                    .frame(maxWidth: .infinity, alignment: .center)
                 }
                 
                 SFButton(text: "Create") {
                     viewModel.createTraining()
                 }
+                .frame(maxWidth: .infinity, alignment: .center)
             }
             .padding(.horizontal, 16)
         }
@@ -106,15 +116,6 @@ struct NewTrainingView: View {
                     dismiss()
                 } label: {
                     Image(systemName: "chevron.left")
-                        .foregroundStyle(.black)
-                }
-            }
-            ToolbarItem(placement: .topBarTrailing) {
-                Button {
-                    // TODO: - Add edit action
-                } label: {
-                    Text("Edit")
-                        .font(.semiMedium2)
                         .foregroundStyle(.black)
                 }
             }

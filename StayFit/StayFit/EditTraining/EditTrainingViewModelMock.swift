@@ -23,4 +23,12 @@ class EditTrainingViewModelMock: EditTrainingViewModeling {
     func editTraining() {
         // do nothing
     }
+    
+    func deleteTraining(completionHandler: @escaping (Bool) -> Void) {
+        // do nothing
+    }
+    
+    func onNotificationChanged(to value: Bool) {
+        // do nothing
+    }
 }

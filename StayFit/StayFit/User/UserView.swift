@@ -2,6 +2,8 @@ import SwiftUI
 
 struct UserView: View {
     
+    // MARK: - Properties
+    
     @State private(set) var viewModel: UserViewModeling
     
     // MARK: - UI
@@ -37,6 +39,9 @@ struct UserView: View {
                 viewModel.changePassword()
             }
             .padding(.top, 32)
+            .alert(isPresented: $viewModel.showSuccessAlert) {
+                Alert(title: Text("Password changed successfully"), dismissButton: .cancel(Text("OK")))
+            }
             
             Spacer()
             
@@ -44,6 +49,9 @@ struct UserView: View {
                 viewModel.logout()
             }
             .padding(.bottom, 32)
+            .alert(isPresented: $viewModel.showFailureAlert) {
+                Alert(title: Text("Changing password failed"), message: Text(viewModel.errorMessage), dismissButton: .cancel(Text("OK")))
+            }
         }
         .background(.white)
     }

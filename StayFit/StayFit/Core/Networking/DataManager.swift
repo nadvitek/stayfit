@@ -6,6 +6,7 @@ protocol DataManaging {
     func retrieveTrainingList() async throws -> [QueryDocumentSnapshot]
     func saveTraining(_ trainingItem: TrainingItem) async
     func retrieveTraining(of id: String) async -> DocumentSnapshot?
+    func deleteTraining(of id: String) async -> Bool
 }
 
 class DataManager: DataManaging {
@@ -58,5 +59,21 @@ class DataManager: DataManaging {
         }
         
         return nil
+    }
+    
+    func deleteTraining(of id: String) async -> Bool {
+        guard let userId = UserDefaults.standard.string(forKey: "userId") else { return false }
+        
+        do {
+            try await fireStore.collection("trainingList_" + userId)
+                .document(id)
+                .delete()
+            
+            print("success")
+            return true
+        } catch {
+            print("Error deleting document: \(error)")
+            return false
+        }
     }
 }

@@ -1,7 +1,8 @@
 import Foundation
 
 protocol TrainingDetailViewModeling {
-    var trainingItem: TrainingItem? { get }
+    var trainingItem: TrainingItem? { get set }
+    var trainingDeleted: Bool { get set }
     
     func loadTraining()
 }
@@ -12,6 +13,7 @@ class TrainingDetailViewModel: TrainingDetailViewModeling {
     // MARK: - Internal properties
     
     var trainingItem: TrainingItem?
+    var trainingDeleted: Bool = false
     
     // MARK: - Private proeperties
     

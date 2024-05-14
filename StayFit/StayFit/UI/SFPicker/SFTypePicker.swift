@@ -22,9 +22,11 @@ struct SFTypePicker: View {
             }
             .padding(.horizontal, 12)
             .padding(.vertical, 10)
+            .foregroundStyle(.sfBlack)
             .background {
                 RoundedRectangle(cornerRadius: 20)
                     .stroke(lineWidth: 3)
+                    .foregroundStyle(.sfBlack)
             }
             
             Picker("", selection: $picked) {

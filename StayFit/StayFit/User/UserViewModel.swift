@@ -4,9 +4,16 @@ import Observation
 protocol UserViewModeling {
     var email: String { get set }
     var password: String { get set }
+    var showSuccessAlert: Bool { get set }
+    var showFailureAlert: Bool { get set }
+    var errorMessage: String { get set }
     
     func logout()
     func changePassword()
+}
+
+enum ChangePasswordState {
+    case success, failure, none
 }
 
 @Observable
@@ -16,6 +23,9 @@ class UserViewModel: UserViewModeling {
     
     var email: String
     var password: String = ""
+    var showFailureAlert: Bool = false
+    var showSuccessAlert: Bool = false
+    var errorMessage: String = ""
     
     // MARK: - Initializers
     
@@ -36,6 +46,15 @@ class UserViewModel: UserViewModeling {
     }
     
     func changePassword() {
-        
+        dependencies.loginManager.changePassword(password) { [weak self] error in
+            guard let self else { return }
+            if let error {
+                print(error)
+                errorMessage = error.localizedDescription
+                self.showFailureAlert = true
+            } else {
+                self.showSuccessAlert = true
+            }
+        }
     }
 }

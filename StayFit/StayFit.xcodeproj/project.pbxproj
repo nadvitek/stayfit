@@ -46,6 +46,13 @@
 		A32FB1132BBB1138003E0BC6 /* TrainingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32FB1122BBB1138003E0BC6 /* TrainingDetailView.swift */; };
 		A32FB1152BBB1198003E0BC6 /* TrainingDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32FB1142BBB1198003E0BC6 /* TrainingDetailViewModel.swift */; };
 		A32FB1172BBB1293003E0BC6 /* TrainingDetailViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32FB1162BBB1293003E0BC6 /* TrainingDetailViewModelMock.swift */; };
+		A38C89852BF0E58C00EE932A /* BackGestureExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38C89842BF0E58C00EE932A /* BackGestureExtension.swift */; };
+		A38C89882BF113ED00EE932A /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38C89872BF113ED00EE932A /* CameraView.swift */; };
+		A38C898A2BF1140B00EE932A /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38C89892BF1140B00EE932A /* CameraViewModel.swift */; };
+		A38C898C2BF1142900EE932A /* CameraViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38C898B2BF1142900EE932A /* CameraViewModelMock.swift */; };
+		A38C898E2BF11F3700EE932A /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38C898D2BF11F3700EE932A /* CameraManager.swift */; };
+		A38C89902BF23EF500EE932A /* SFCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38C898F2BF23EF500EE932A /* SFCamera.swift */; };
+		A38C89922BF2793E00EE932A /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38C89912BF2793E00EE932A /* NotificationManager.swift */; };
 		A39C207F2BE17967009D16C1 /* EditTrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39C207E2BE17967009D16C1 /* EditTrainingView.swift */; };
 		A39C20812BE17978009D16C1 /* EditTrainingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39C20802BE17978009D16C1 /* EditTrainingViewModel.swift */; };
 		A39C20832BE17982009D16C1 /* EditTrainingViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39C20822BE17982009D16C1 /* EditTrainingViewModelMock.swift */; };
@@ -100,6 +107,13 @@
 		A32FB1122BBB1138003E0BC6 /* TrainingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDetailView.swift; sourceTree = "<group>"; };
 		A32FB1142BBB1198003E0BC6 /* TrainingDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDetailViewModel.swift; sourceTree = "<group>"; };
 		A32FB1162BBB1293003E0BC6 /* TrainingDetailViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDetailViewModelMock.swift; sourceTree = "<group>"; };
+		A38C89842BF0E58C00EE932A /* BackGestureExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGestureExtension.swift; sourceTree = "<group>"; };
+		A38C89872BF113ED00EE932A /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		A38C89892BF1140B00EE932A /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
+		A38C898B2BF1142900EE932A /* CameraViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModelMock.swift; sourceTree = "<group>"; };
+		A38C898D2BF11F3700EE932A /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
+		A38C898F2BF23EF500EE932A /* SFCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFCamera.swift; sourceTree = "<group>"; };
+		A38C89912BF2793E00EE932A /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		A39C207E2BE17967009D16C1 /* EditTrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTrainingView.swift; sourceTree = "<group>"; };
 		A39C20802BE17978009D16C1 /* EditTrainingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTrainingViewModel.swift; sourceTree = "<group>"; };
 		A39C20822BE17982009D16C1 /* EditTrainingViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTrainingViewModelMock.swift; sourceTree = "<group>"; };
@@ -160,6 +174,7 @@
 		A31F974B2BB6E5970029C02A /* StayFit */ = {
 			isa = PBXGroup;
 			children = (
+				A38C89862BF113E100EE932A /* CameraView */,
 				A39C20872BE195A1009D16C1 /* GoogleService-Info.plist */,
 				A39C207D2BE17948009D16C1 /* EditTraining */,
 				A32409CA2BD4148E006C97DB /* NewTraining */,
@@ -221,6 +236,8 @@
 				A30B0A972BE6252B000A814E /* Networking */,
 				A32FB10E2BBA0763003E0BC6 /* Extension */,
 				A32FB0FA2BB8A2AB003E0BC6 /* Model */,
+				A38C898D2BF11F3700EE932A /* CameraManager.swift */,
+				A38C89912BF2793E00EE932A /* NotificationManager.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -289,6 +306,7 @@
 			isa = PBXGroup;
 			children = (
 				A32FB10F2BBA076C003E0BC6 /* DateExtension.swift */,
+				A38C89842BF0E58C00EE932A /* BackGestureExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -301,6 +319,17 @@
 				A32FB1162BBB1293003E0BC6 /* TrainingDetailViewModelMock.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		A38C89862BF113E100EE932A /* CameraView */ = {
+			isa = PBXGroup;
+			children = (
+				A38C89872BF113ED00EE932A /* CameraView.swift */,
+				A38C89892BF1140B00EE932A /* CameraViewModel.swift */,
+				A38C898B2BF1142900EE932A /* CameraViewModelMock.swift */,
+				A38C898F2BF23EF500EE932A /* SFCamera.swift */,
+			);
+			path = CameraView;
 			sourceTree = "<group>";
 		};
 		A39C207D2BE17948009D16C1 /* EditTraining */ = {
@@ -394,8 +423,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A31F97612BB6ECC60029C02A /* SFColors.swift in Sources */,
+				A38C898A2BF1140B00EE932A /* CameraViewModel.swift in Sources */,
 				A32FB1102BBA076C003E0BC6 /* DateExtension.swift in Sources */,
 				A32FB1132BBB1138003E0BC6 /* TrainingDetailView.swift in Sources */,
+				A38C89882BF113ED00EE932A /* CameraView.swift in Sources */,
 				A32FB0F42BB82388003E0BC6 /* StatisticsViewModelMock.swift in Sources */,
 				A32FB1052BB99FEC003E0BC6 /* SFDatePicker.swift in Sources */,
 				A30B0A9B2BE6258D000A814E /* LoginModel.swift in Sources */,
@@ -413,6 +444,7 @@
 				A32FB1002BB99A88003E0BC6 /* SFMenuViewModelMock.swift in Sources */,
 				A32FB1172BBB1293003E0BC6 /* TrainingDetailViewModelMock.swift in Sources */,
 				A31F976E2BB6FFE10029C02A /* SFErrorLabel.swift in Sources */,
+				A38C89922BF2793E00EE932A /* NotificationManager.swift in Sources */,
 				A30B0AA22BE670C5000A814E /* FirebaseKeys.swift in Sources */,
 				A39C207F2BE17967009D16C1 /* EditTrainingView.swift in Sources */,
 				A31F97682BB6F7BA0029C02A /* SFButton.swift in Sources */,
@@ -425,14 +457,18 @@
 				A30B0A962BE62452000A814E /* AppDependency.swift in Sources */,
 				A32FB0ED2BB7652C003E0BC6 /* UserViewModel.swift in Sources */,
 				A39C20812BE17978009D16C1 /* EditTrainingViewModel.swift in Sources */,
+				A38C898E2BF11F3700EE932A /* CameraManager.swift in Sources */,
 				A31F97662BB6F4FC0029C02A /* LoginViewModel.swift in Sources */,
+				A38C89902BF23EF500EE932A /* SFCamera.swift in Sources */,
 				A31F974F2BB6E5970029C02A /* ContentView.swift in Sources */,
 				A31F975F2BB6ECAE0029C02A /* SFTextField.swift in Sources */,
 				A3BA83B72BD57EE7000250F6 /* NewTrainingViewModel.swift in Sources */,
 				A32FB0E42BB751E5003E0BC6 /* SFTabView.swift in Sources */,
 				A32FB0E02BB745B7003E0BC6 /* SFSwitch.swift in Sources */,
+				A38C89852BF0E58C00EE932A /* BackGestureExtension.swift in Sources */,
 				A32FB10B2BB9E859003E0BC6 /* SFTrainingItemView.swift in Sources */,
 				A31F974D2BB6E5970029C02A /* StayFitApp.swift in Sources */,
+				A38C898C2BF1142900EE932A /* CameraViewModelMock.swift in Sources */,
 				A32FB1072BB9A89C003E0BC6 /* TrainingItem.swift in Sources */,
 				A32FB0F22BB821A1003E0BC6 /* StatisticsViewModel.swift in Sources */,
 				A3BA83B92BD58EBE000250F6 /* NewTrainingViewModelMock.swift in Sources */,
@@ -572,7 +608,7 @@
 				DEVELOPMENT_TEAM = 6DLYAQP65H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "Capture the Training moment";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Catch the Training moment";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -601,7 +637,7 @@
 				DEVELOPMENT_TEAM = 6DLYAQP65H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "Capture the Training moment";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Catch the Training moment";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

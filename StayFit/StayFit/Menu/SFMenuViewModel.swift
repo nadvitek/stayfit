@@ -71,32 +71,30 @@ class SFMenuViewModel: SFMenuViewModeling {
     
     // MARK: - Private helpers
     
-    private func sortData() {
-        data.sort { $0.date > $1.date }
-    }
-    
     private func processData() -> [String: [TrainingItem]] {
         var output: [String: [TrainingItem]] = [:]
         var coppiedData = data
         
         if dateFilterActivated {
-//            filterByDate()
+            coppiedData = coppiedData.filter { $0.date.parseDateToString() == filteredDate.parseDateToString() }
         }
         
         if typeFilterActivated {
             coppiedData = coppiedData.filter { $0.trainingType == filteredType }
         }
         
-        for item in data {
-            let month = monthString(from: item.date)
-            let year = yearString(from: item.date)
+        coppiedData.sort { $0.date > $1.date }
+        
+        for i in 0..<coppiedData.count {
+            let month = monthString(from: coppiedData[i].date)
+            let year = yearString(from: coppiedData[i].date)
             
             let key = "\(month) \(year)"
             
             if output[key] != nil {
-                output[key]?.append(item)
+                output[key]?.append(coppiedData[i])
             } else {
-                output[key] = [item]
+                output[key] = [coppiedData[i]]
             }
         }
         
@@ -104,10 +102,6 @@ class SFMenuViewModel: SFMenuViewModeling {
     }
     
     private func filterByDate(data: inout [TrainingItem]) {
-        
-    }
-    
-    private func filterByType(data: inout [TrainingItem]) {
         
     }
     

@@ -7,6 +7,10 @@ class UserViewModelMock: UserViewModeling {
     
     var email: String
     var password: String = ""
+    var changePasswordState: ChangePasswordState = .none
+    var showSuccessAlert: Bool = false
+    var showFailureAlert: Bool = false
+    var errorMessage: String = ""
     
     // MARK: - Initializers
     
@@ -17,6 +21,10 @@ class UserViewModelMock: UserViewModeling {
     // MARK: - Internal interface
     
     func logout() {
+        // do nothing
+    }
+
+    func changePassword() {
         // do nothing
     }
 }

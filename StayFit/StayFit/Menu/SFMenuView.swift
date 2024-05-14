@@ -57,11 +57,10 @@ struct SFMenuView: View {
                 SFTypePicker(name: viewModel.typeFilterActivated ? viewModel.filteredType.rawValue : "Type", picked: $viewModel.filteredType)
                 
                 SFDatePicker(name: viewModel.dateFilterActivated ?  viewModel.filteredDate.parseDateToString() : "Date", picked: $viewModel.filteredDate)
-                
-                Spacer()
             }
             .padding(.vertical, 2)
             .padding(.horizontal, 16)
+            .foregroundStyle(.sfBlack)
         }
         .scrollIndicators(.hidden)
         .scrollBounceBehavior(.basedOnSize, axes: .horizontal)

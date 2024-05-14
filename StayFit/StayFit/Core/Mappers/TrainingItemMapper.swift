@@ -59,7 +59,7 @@ enum TrainingItemMapper {
     
     private static func mapToDate(_ dateAsString: String) -> Date {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
+        dateFormatter.dateFormat = "dd-MM-yyyy"
         
         if let date = dateFormatter.date(from: dateAsString) {
             return date
