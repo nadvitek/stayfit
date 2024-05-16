@@ -13,7 +13,7 @@ class NewTrainingViewModelMock: NewTrainingViewModeling {
     var typeSelected: Bool = false
     var dateSelected: Bool = false
     var isNotificationOn: Bool = false
-    var image: Image? = nil
+    var image: UIImage? = nil
     var showCamera: Bool = false
     
     var creationCompleted: Bool = false

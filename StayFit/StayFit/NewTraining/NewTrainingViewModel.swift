@@ -9,7 +9,7 @@ protocol NewTrainingViewModeling {
     var typeSelected: Bool { get set }
     var dateSelected: Bool { get set }
     var isNotificationOn: Bool { get set }
-    var image: Image? { get set }
+    var image: UIImage? { get set }
     var showCamera: Bool { get set }
     
     var creationCompleted: Bool { get }
@@ -38,7 +38,7 @@ class NewTrainingViewModel: NewTrainingViewModeling {
     var typeSelected: Bool = false
     var dateSelected: Bool = false
     var isNotificationOn: Bool = false
-    var image: Image? = nil
+    var image: UIImage? = nil
     var showCamera: Bool = false
     
     var creationCompleted: Bool = false
@@ -75,7 +75,7 @@ class NewTrainingViewModel: NewTrainingViewModeling {
     }
     
     func imagePickerCompletionHandler(_ image: UIImage) {
-        self.image = Image(uiImage: image)
+        self.image = image
         showCamera = false
     }
 }

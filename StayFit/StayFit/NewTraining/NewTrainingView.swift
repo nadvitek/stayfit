@@ -82,10 +82,14 @@ struct NewTrainingView: View {
                         Text("Photo")
                             .font(.semiMedium)
                         
-                        photo
-                            .resizable()
-                            .scaledToFit()
-                            .clipShape(.rect(cornerRadius: 10))
+                        Button {
+                            viewModel.showCamera = true
+                        } label: {
+                            Image(uiImage: photo)
+                                .resizable()
+                                .scaledToFit()
+                                .clipShape(.rect(cornerRadius: 10))
+                        }
                     }
                     .padding(.top, 16)
                 } else {
