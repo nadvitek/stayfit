@@ -1,14 +1,18 @@
 import Foundation
+import UIKit
+import SwiftUI
 
 protocol EditTrainingViewModeling {
     var trainingItem: TrainingItem { get set }
     var isNotificationOn: Bool { get set }
     
     var editCompleted: Bool { get set }
+    var showCamera: Bool { get set }
     
     func editTraining()
     func deleteTraining(completionHandler: @escaping (Bool) -> Void)
     func onNotificationChanged(to value: Bool)
+    func imagePickerCompletionHandler(_ image: UIImage)
 }
 
 @Observable
@@ -20,6 +24,7 @@ class EditTrainingViewModel: EditTrainingViewModeling {
     var isNotificationOn: Bool = false
     
     var editCompleted: Bool = false
+    var showCamera: Bool = false
     
     // MARK: - Private properties
     
@@ -57,5 +62,10 @@ class EditTrainingViewModel: EditTrainingViewModeling {
         } else {
             dependencies.notificationManager.cancelNotification(of: trainingItem.id)
         }
+    }
+    
+    func imagePickerCompletionHandler(_ image: UIImage) {
+        self.trainingItem.image = image
+        showCamera = false
     }
 }

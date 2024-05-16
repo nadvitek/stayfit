@@ -90,13 +90,15 @@ struct EditTrainingView: View {
                         Text("Photo")
                             .font(.semiMedium)
                         
-                        photo
+                        Image(uiImage: photo)
+                            .resizable()
+                            .scaledToFit()
                             .clipShape(.rect(cornerRadius: 10))
                     }
                     .padding(.top, 16)
                 } else {
-                    SFButton(text: "Add Photo") {
-                        // TODO: - Implement
+                    SFButton(text: "Add photo") {
+                        viewModel.showCamera = true
                     }
                     .frame(maxWidth: .infinity, alignment: .center)
                 }
@@ -135,6 +137,9 @@ struct EditTrainingView: View {
         .onChange(of: viewModel.trainingItem.isNotificationOn, { _, newValue in
             viewModel.onNotificationChanged(to: newValue)
         })
+        .fullScreenCover(isPresented: $viewModel.showCamera) {
+            Camera(completionHandler: viewModel.imagePickerCompletionHandler)
+        }
         .background(.white)
     }
 }

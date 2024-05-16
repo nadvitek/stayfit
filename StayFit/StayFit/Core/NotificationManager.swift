@@ -13,7 +13,7 @@ final class NotificationManager: NotificationManaging {
     func scheduleLocalNotification(_ trainingItem: TrainingItem) {
         UNUserNotificationCenter.current().getNotificationSettings { [weak self] settings in
             guard let self else { return }
-            if settings.authorizationStatus == UNAuthorizationStatus.authorized{
+            if settings.authorizationStatus == UNAuthorizationStatus.authorized {
                 let content = UNMutableNotificationContent()
                 
                 content.title = "Training today!"

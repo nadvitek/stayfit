@@ -47,12 +47,13 @@ struct NewTrainingView: View {
                     SFTextField(text: $viewModel.place, placeholder: "Insert place")
                 }
                 .padding(.top, 16)
+
                 HStack(spacing: 0) {
                     VStack(alignment: .leading, spacing: 16) {
                         Text("Date")
                             .font(.semiMedium)
 
-                        SFDatePicker(name: viewModel.dateSelected ?  viewModel.date.parseDateToString() : "Date", picked: $viewModel.date)
+                        SFDatePicker(name: viewModel.dateSelected ? viewModel.date.parseDateToString() : "Date", picked: $viewModel.date)
                     }
                     .padding(.top, 16)
                     
@@ -82,21 +83,14 @@ struct NewTrainingView: View {
                             .font(.semiMedium)
                         
                         photo
+                            .resizable()
+                            .scaledToFit()
                             .clipShape(.rect(cornerRadius: 10))
                     }
                     .padding(.top, 16)
                 } else {
-                    NavigationLink {
-                        CameraView(viewModel: CameraViewModel())
-                    } label: {
-                        SFButton(text: "Add Photo") {
-                            
-                        }
-                    }
-                    .frame(maxWidth: .infinity, alignment: .center)
-
                     SFButton(text: "Add Photo") {
-                        
+                        viewModel.showCamera = true
                     }
                     .frame(maxWidth: .infinity, alignment: .center)
                 }
@@ -119,6 +113,9 @@ struct NewTrainingView: View {
                         .foregroundStyle(.black)
                 }
             }
+        }
+        .fullScreenCover(isPresented: $viewModel.showCamera) {
+            Camera(completionHandler: viewModel.imagePickerCompletionHandler)
         }
         .onChange(of: viewModel.creationCompleted) {
             dismiss()

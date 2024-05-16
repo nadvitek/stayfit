@@ -10,10 +10,12 @@ protocol NewTrainingViewModeling {
     var dateSelected: Bool { get set }
     var isNotificationOn: Bool { get set }
     var image: Image? { get set }
+    var showCamera: Bool { get set }
     
     var creationCompleted: Bool { get }
     
     func createTraining()
+    func imagePickerCompletionHandler(_ image: UIImage)
 }
 
 @Observable
@@ -37,6 +39,7 @@ class NewTrainingViewModel: NewTrainingViewModeling {
     var dateSelected: Bool = false
     var isNotificationOn: Bool = false
     var image: Image? = nil
+    var showCamera: Bool = false
     
     var creationCompleted: Bool = false
     
@@ -69,5 +72,10 @@ class NewTrainingViewModel: NewTrainingViewModeling {
             await dependencies.dataManager.saveTraining(training)
             creationCompleted = true
         }
+    }
+    
+    func imagePickerCompletionHandler(_ image: UIImage) {
+        self.image = Image(uiImage: image)
+        showCamera = false
     }
 }

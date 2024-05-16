@@ -7,7 +7,7 @@ struct TrainingItem: Identifiable {
     var place: String
     var notes: String
     var date: Date
-    var image: Image?
+    var image: UIImage?
     var isNotificationOn: Bool
 }
 
@@ -22,7 +22,7 @@ extension TrainingItem {
             place: "Libeň",
             notes: "Náročný",
             date: .now,
-            image: Image(systemName: "plus"),
+            image: UIImage(systemName: "plus"),
             isNotificationOn: false
         )
     }

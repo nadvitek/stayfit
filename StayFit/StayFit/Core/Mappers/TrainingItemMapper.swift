@@ -1,6 +1,7 @@
 import Foundation
 import FirebaseCore
 import FirebaseFirestore
+import SwiftUI
 
 enum TrainingItemMapper {
     static func mapToTrainingItem(_ document: QueryDocumentSnapshot) -> TrainingItem {
@@ -12,6 +13,7 @@ enum TrainingItemMapper {
             place: data[FirebaseKeys.place] as? String ?? "",
             notes: data[FirebaseKeys.notes] as? String ?? "",
             date: mapToDate(data[FirebaseKeys.date] as? String ?? ""),
+            image: mapStringToImage(data[FirebaseKeys.image] as? String ?? ""),
             isNotificationOn: data[FirebaseKeys.isNotificationOn] as? Bool ?? false
         )
     }
@@ -25,6 +27,7 @@ enum TrainingItemMapper {
             place: data?[FirebaseKeys.place] as? String ?? "",
             notes: data?[FirebaseKeys.notes] as? String ?? "",
             date: mapToDate(data?[FirebaseKeys.date] as? String ?? ""),
+            image: mapStringToImage(data?[FirebaseKeys.image] as? String ?? ""),
             isNotificationOn: data?[FirebaseKeys.isNotificationOn] as? Bool ?? false
         )
     }
@@ -36,8 +39,27 @@ enum TrainingItemMapper {
             FirebaseKeys.place: trainingItem.place,
             FirebaseKeys.notes: trainingItem.notes,
             FirebaseKeys.date: trainingItem.date.parseDateToString(),
+            FirebaseKeys.image: mapImageToString(trainingItem.image),
             FirebaseKeys.isNotificationOn: trainingItem.isNotificationOn
         ]
+    }
+    
+    private static func mapImageToString(_ image: UIImage?) -> String {
+        guard let image else { return "" }
+        
+        let data = image.jpegData(compressionQuality: 0.7)!
+        
+        let imageString = data.base64EncodedString(options: NSData.Base64EncodingOptions(rawValue: 0))
+        return imageString
+    }
+    
+    private static func mapStringToImage(_ data: String) -> UIImage? {
+        guard let decodedData = NSData(base64Encoded: data, options: NSData.Base64DecodingOptions(rawValue: 0)) else {
+            return nil
+        }
+        
+        let image = UIImage(data: decodedData as Data)
+        return image
     }
     
     private static func mapToTrainingType(_ typeAsString: String?) -> TrainingType {

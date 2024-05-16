@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 @Observable
 class EditTrainingViewModelMock: EditTrainingViewModeling {
@@ -11,6 +12,7 @@ class EditTrainingViewModelMock: EditTrainingViewModeling {
     var isNotificationOn: Bool = false
 
     var editCompleted: Bool = false
+    var showCamera: Bool = false
     
     // MARK: - Initializers
     
@@ -29,6 +31,10 @@ class EditTrainingViewModelMock: EditTrainingViewModeling {
     }
     
     func onNotificationChanged(to value: Bool) {
+        // do nothing
+    }
+    
+    func imagePickerCompletionHandler(_ image: UIImage) {
         // do nothing
     }
 }

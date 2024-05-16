@@ -14,6 +14,7 @@ class NewTrainingViewModelMock: NewTrainingViewModeling {
     var dateSelected: Bool = false
     var isNotificationOn: Bool = false
     var image: Image? = nil
+    var showCamera: Bool = false
     
     var creationCompleted: Bool = false
     
@@ -32,6 +33,10 @@ class NewTrainingViewModelMock: NewTrainingViewModeling {
     }
     
     func createTraining() {
+        // do nothing
+    }
+    
+    func imagePickerCompletionHandler(_ image: UIImage) {
         // do nothing
     }
 }

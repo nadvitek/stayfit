@@ -10,48 +10,52 @@ struct TrainingDetailView: View {
     // MARK: - UI
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            HStack(spacing: 0) {
-                Button {
-                    dismiss()
-                } label: {
-                    Image(systemName: "chevron.left")
-                        .foregroundStyle(.black)
-                }
-                
-                Spacer()
-                
-                if let trainingItem = viewModel.trainingItem {
-                    NavigationLink {
-                        EditTrainingView(viewModel: EditTrainingViewModel(dependencies: appDependencies, trainingItem: trainingItem), trainingDeleted: $viewModel.trainingDeleted)
+        ScrollView {
+            VStack(alignment: .leading, spacing: 8) {
+                HStack(spacing: 0) {
+                    Button {
+                        dismiss()
                     } label: {
-                        Text("Edit")
-                            .font(.semiMedium2)
+                        Image(systemName: "chevron.left")
                             .foregroundStyle(.black)
                     }
+                    
+                    Spacer()
+                    
+                    if let trainingItem = viewModel.trainingItem {
+                        NavigationLink {
+                            EditTrainingView(viewModel: EditTrainingViewModel(dependencies: appDependencies, trainingItem: trainingItem), trainingDeleted: $viewModel.trainingDeleted)
+                        } label: {
+                            Text("Edit")
+                                .font(.semiMedium2)
+                                .foregroundStyle(.black)
+                        }
+                    }
+                }
+                Text("Training Detail")
+                    .font(.semiLarge)
+                    .foregroundStyle(.black)
+                
+                if let trainingItem = viewModel.trainingItem {
+                    trainingTypeView(trainingItem)
+                    
+                    placeView(trainingItem)
+                    
+                    dateView(trainingItem)
+                    
+                    notesView(trainingItem)
+                    
+                    photoView(trainingItem)
+                    
+                    Spacer()
+                } else {
+                    ProgressView()
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
             }
-            Text("Training Detail")
-                .font(.semiLarge)
-                .foregroundStyle(.black)
-            
-            if let trainingItem = viewModel.trainingItem {
-                trainingTypeView(trainingItem)
-                
-                placeView(trainingItem)
-                
-                dateView(trainingItem)
-                
-                notesView(trainingItem)
-                
-                photoView(trainingItem)
-                
-                Spacer()
-            } else {
-                ProgressView()
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-            }
         }
+        .scrollIndicators(.hidden)
+        .scrollBounceBehavior(.basedOnSize)
         .onChange(of: viewModel.trainingDeleted) {
             dismiss()
         }
@@ -140,7 +144,9 @@ struct TrainingDetailView: View {
                 Text("Photo")
                     .font(.semiMedium)
                 
-                photo
+                Image(uiImage: photo)
+                    .resizable()
+                    .scaledToFit()
                     .clipShape(.rect(cornerRadius: 10))
             }
             .padding(.top, 16)
